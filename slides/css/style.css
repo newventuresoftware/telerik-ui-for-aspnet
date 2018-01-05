@@ -1,0 +1,178 @@
+@font-face {
+	font-family: "Dax-Bold";
+	src: url("./../fonts/DaxComp-Bold.ttf");
+}
+
+h1:before, h2:before, h3:before, h4:before, h5:before {
+    content: "{";
+    color: #4DBEA1;
+}
+
+h1:after, h2:after, h3:after, h4:after, h5:after {
+    content: "}";
+    color: #4DBEA1;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+    font-family: "Dax-Bold";
+}
+
+.reveal .nvs-website-bar {
+    background-color: #4dbea1;
+    color: #fff;
+    line-height: 0.6em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5% 0 0.5% 0.5%;
+    font-size: 0.5em;
+}
+
+.reveal .nvs-website-bar .nvs-website-text {
+    font-weight: bold;
+}
+
+.brackets:before {
+    content: "{";
+}
+
+.brackets:after {
+    content: "}";
+}
+
+.reveal .no-border{
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal .bg-transparent {
+    background: transparent;
+}
+
+.reveal .text-right {
+    text-align: right;
+}
+
+.reveal .text-left {
+    text-align: left;
+}
+
+.reveal .nvs-logo-container {
+    padding-left: 15px;
+}
+
+.reveal .progress-logo-container {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.reveal #speaker-info {
+    font-size: 30px;
+}
+
+.reveal #speaker-info .speaker-img-container {
+    margin-right: 25px;
+}
+
+.reveal #speaker-info .speaker-img-container, .speaker-contact-info {
+    display: inline-block;
+}
+
+.reveal .color-white * {
+    color: #fff;
+}
+
+.reveal .color-red * {
+    color: red;
+}
+
+.reveal .color-yellow * {
+    color: yellow;
+}
+
+.reveal .color-green * {
+    color: green;
+}
+
+.reveal .circle-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.reveal .circle {
+    position: absolute;
+    font-size: 0.6em;
+    background-color: #0089CE;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    line-height: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.reveal .circle.center {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    font-size: 1em;
+    height: 300px;
+    width: 300px;
+    line-height: 300px;
+    background-color: #374959;
+}
+
+.reveal .circle.top {
+    position: absolute;
+    top: calc(50% - 75px - 200px - 50px);
+    left: calc(50% - 75px);
+}
+
+.reveal .circle.bottom {
+    position: absolute;
+    top: calc(50% - 75px + 200px + 50px);
+    left: calc(50% - 75px);
+}
+
+.reveal .circle.left {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px - 200px - 50px);
+
+}
+
+.reveal .circle.right {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px + 200px + 50px);
+}
+
+.reveal .circle.top-left {
+    position: absolute;
+    top: calc(50% - 75px - 200px);
+    left: calc(50% - 75px - 200px);
+}
+
+.reveal .circle.top-right {
+    position: absolute;
+    top: calc(50% - 75px - 200px);
+    left: calc(50% - 75px + 200px);
+}
+
+.reveal .circle.bottom-left {
+    position: absolute;
+    top: calc(50% - 75px + 200px);
+    left: calc(50% - 75px - 200px);
+}
+
+.reveal .circle.bottom-right {
+    position: absolute;
+    top: calc(50% - 75px + 200px);
+    left: calc(50% - 75px + 200px);
+}
