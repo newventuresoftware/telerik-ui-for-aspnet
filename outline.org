@@ -1,0 +1,23 @@
+* Kendo UI for ASP.NET MVC and ASP.NET Core 
+** Comparison between ASP.NET MVC and ASP.NET Core
+** ASP.NET MVC
+	1. HtmlHelpers and the Fluent API
+    2. UI for ASP.NET MVC
+       1) Project Setup(VS Wizard and Manual)
+       2) Basic Widgets
+		- e.g. DropDownList, DateTimePicker, Autocomplete...
+       3) Advanced Widgets
+          - Grid (filtering, sorting, paging, server-side and Ajax binding)
+          - Chart (line, bar)
+       4) Beyond widgets
+          - DataSourceRequest/DataSourceResult server-side classes
+          - Using model decorators to create validation errors in the Grid w/ edit mode
+** ASP.NET Core
+	1.	Intro to TagHelpers and why they’re used in ASP.NET Core
+	2.	How to use the UI for ASP.NET Core TagHelpers (more coming with R1 2018)
+		1)	Kind of the same gist as above
+** Responsive Design and Theme Builder
+** Support & Community
+	1. Submitting Support Tickets
+    2. GitHub - source code and issue tracker
+    3. Roadmap
