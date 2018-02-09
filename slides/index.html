@@ -103,20 +103,110 @@
                         <p>Used to render some part of the model as a user interface.</p>
                     </section>
                     <section>
-                        <h3>
-                            Controllers
-                        </h3>
+                        <h3>Controllers</h3>
                         <p>Process incoming requests, perform operations on the model, and select views to render to the user.</p>
                     </section>
                     <section>
                         <p><em>Loosely cooupled components</em></p>
                         <img alt="MVC" src="./img/mvc-annotated.png" class="no-border" width="750" />
                     </section>
-                    <section>
-                        <p>About ASP.NET MVC</p>
+                    <section data-background="#333333">
+                        <img alt="" src="./img/logo-aspnetmvc.png" class="no-border" />
                     </section>
                     <section>
-                        The Razor Syntax
+                        <h4 class="text-right">ASP.NET MVC</h4>
+                        <ul>
+                            <li class="fragment">Web Application Framework</li>
+                            <li class="fragment">Implements the MVC pattern</li>
+                            <li class="fragment">Developed by Microsoft</li>
+                            <li class="fragment">First Release in 2007</li>
+                            <li class="fragment">Open Source</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img alt="" src="./img/new-features-of-aspnet-40-29-728.jpg" class="no-border" />
+                    </section>
+                    <section>
+                        <h3>ASP.NET Razor</h3>
+                        <p>
+                            <em>Simple-syntax view engine and was released as part of MVC 3</em>
+                        </p>
+                        <img alt="" src="./img/template-diagram.jpg" class="no-border" />
+                    </section>
+                    <section>
+                        <p><strong>Razor</strong> supports C# and uses the <strong>@</strong> symbol to transition from HTML to C#</p>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Implicitit Expressions</h4>
+                        <pre>CSHTML<code class="html">
+<p>@DateTime.Now</p>
+<p>@DateTime.IsLeapYear(2016)</p>
+                        </code></pre>
+                        <pre>HTML<code class="html">
+<p>9.2.2018 г. 10:49:34</p>
+<p>True</p>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Explicit Expressions</h4>
+                        <pre>CSHTML<code class="html">
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+                        </code></pre>
+                        <pre>HTML<code class="html">
+<p>Last week this time: 2.2.2018 г. 10:55:00</p>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Code Blocks</h4>
+                        <pre>CSHTML<code class="html">@{
+    var message = "You are the Semicolon to my Statements.";
+}
+<p>@message</p>
+
+@{
+    message = "Deleted code is debugged code.";
+}
+<p>@message</p></code></pre>
+                        <pre>HTML <code class="html"><p>You are the Semicolon to my Statements.</p>
+<p>Deleted code is debugged code.</p></code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p>Conditionals <strong>@if</strong>, <strong>else if</strong>, <strong>else</strong>, and <strong>@switch</strong></p>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
+                    </section> 
+                    <section>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p><strong>@try, catch, finally</strong></p>
+                    </section>
+                    <section>
+                        <h3>Razor Directives</h3>
+                        <p>Implicit expressions with reserved keywords following the <strong>@</strong> symbol.</p>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@using</strong></p>
+                        <pre>CSHTML<code class="html">@using System.IO
+@{
+    var dir = Directory.GetCurrentDirectory();
+}
+
+<p>@dir</p></code></pre>
+                        <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@model</strong><br/><em>specifies the type of the model passed to a view</em></p>
+                        <pre>CSHTML<code class="html">@model LoginViewModel
+
+<div>The Login Email: @Model.Email</div></code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@inherits</strong>, <strong>@inject</strong>, <strong>@functions</strong></p>
                     </section>
                     <section>
                         <p>Html Helpers</p>
