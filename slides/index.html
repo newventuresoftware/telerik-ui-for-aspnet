@@ -114,7 +114,7 @@
                         <img alt="" src="./img/logo-aspnetmvc.png" class="no-border" />
                     </section>
                     <section>
-                        <h4 class="text-right">ASP.NET MVC</h4>
+                        <h4 class="text-right">ASP.NET MVC 5</h4>
                         <ul>
                             <li class="fragment">Web Application Framework</li>
                             <li class="fragment">Implements the MVC pattern</li>
@@ -126,10 +126,15 @@
                     <section>
                         <img alt="" src="./img/new-features-of-aspnet-40-29-728.jpg" class="no-border" />
                     </section>
+                    <section data-background="#fff">
+                        <a href="https://www.slideshare.net/llysik/aspnet-mvc-4-request-pipeline-internals" target="_blank">
+                            <img alt="" src="./img/ASP.NETMVC5Pipeline.png" class="no-border" width="550" />
+                        </a>
+                    </section>
                     <section>
-                        <h3>ASP.NET Razor</h3>
+                        <h3>The Razor View Engine</h3>
                         <p>
-                            <em>Simple-syntax view engine and was released as part of MVC 3</em>
+                            <em>Simple-syntax <strong>view engine</strong> and was released as part of MVC 3</em>
                         </p>
                         <img alt="" src="./img/template-diagram.jpg" class="no-border" />
                     </section>
@@ -173,14 +178,63 @@
                     <section>
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p>Conditionals <strong>@if</strong>, <strong>else if</strong>, <strong>else</strong>, and <strong>@switch</strong></p>
+                        <pre>CSHTML<code class="html">@if (value % 2 == 0)
+{
+    <p>The value was even.</p>
+}
+else
+{
+    <p>The value was odd.</p>
+}</code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <pre>CSHTML <code class="html">@switch (value)
+{
+    case 1:
+        <p>The value is 1!</p>
+        break;
+    case 1337:
+        <p>Your number is 1337!</p>
+        break;
+    default:
+        <p>Your number wasn't 1 or 1337.</p>
+        break;
+}</code></pre>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
-                    </section> 
+                        <pre>CSHTML <code class="html">@foreach (var person in people)
+{
+    <p>Name: @person.Name</p>
+    <p>Age: @person.Age</p>
+}</code></pre>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <pre>CSHTML <code class="html">@for (var i = 0; i < people.Length; i++)
+{
+    var person = people[i];
+    <p>Name: @person.Name</p>
+    <p>Age: @person.Age</p>
+}</code></pre>                        
+                    </section>
                     <section>
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p><strong>@try, catch, finally</strong></p>
+                        <pre>CSHTML <code class="html">@try
+{
+    throw new InvalidOperationException("You did something invalid.");
+}
+catch (Exception ex)
+{
+    <p>The exception message: @ex.Message</p>
+}
+finally
+{
+    <p>The finally statement.</p>
+}</code></pre>
                     </section>
                     <section>
                         <h3>Razor Directives</h3>
@@ -206,14 +260,67 @@
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
-                        <p><strong>@inherits</strong>, <strong>@inject</strong>, <strong>@functions</strong></p>
+                        <p><strong>@inherits</strong>, <strong>@inject</strong>, <strong>@functions</strong>, <strong>@section</strong></p>
                     </section>
                     <section>
-                        <p>Html Helpers</p>
+                        <h3>Html Helpers</h3>
+                        <img alt="" src="./img/Santa's_Little_Helper.png" class="no-border" width="350" />
                     </section>
                     <section>
-                        <p>Fluent API</p>
+                        <p><em>An <strong>HTML Helper</strong> is just a method that returns a string.</em></p>
+                        <img class="fragment no-border" src="./img/say-what.PNG" width="500" />
                     </section>
+                    <section>
+                        <p><strong>HTML Helpers</strong> can be used to render standard HTML tags. They also can be used to render complex content.</p>
+                    </section>
+                    <section>
+                        <h4 class="text-right">Built-in Helpers</h4>
+                        <ul>
+                            <li>Html.ActionLink()</li>
+                            <li>Html.BeginForm()</li>
+                            <li>Html.DropDownLost()</li>
+                            <li>Html.TextArea()</li>
+                            <li>Html.Partial()</li>
+                            <li>Html.Password()</li>
+                            <li>...</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <pre>CSHTML <code class="html">@{
+var items = new [] {
+        new SelectListItem() { Text = "One", Value = "1" },
+        new SelectListItem() { Text = "Five", Value = "5" },
+        new SelectListItem() { Text = "Ten", Value = "10" }
+    };
+}
+
+@Html.DropDownList("Quantity", items)</code></pre>
+                        <pre>HTML <code class="html"><select id="Quantity" name="Quantity">
+    <option value="1">One</option>
+    <option value="5">Five</option>
+    <option value="10">Ten</option>
+</select></code></pre>
+                    </section>
+                    <section>
+                        <h3>Live Demo</h3>
+                        <p>Using Html Helpers</p>
+                    </section>
+                    <section>
+                        <h3>Creating Custom Html Helpers</h3>
+                        <ul>
+                            <li>Creating a static method</li>
+                            <li>Writing an extension method</li>
+                            <li>@helper</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Live Demo</h3>
+                        <p>Creating Custom Html Helpers</p>
+                        <!-- TODO: Fluent Syntax -->
+                    </section>        
+                </section>
+                <!-- KendoUI for MVC -->
+                <section>
                     <section>
                         <p>Project Setup</p>
                     </section>
@@ -238,6 +345,9 @@
                     <section>
                         <p>ASP.NET Core TagHelpers</p>
                     </section>
+                </section>
+                <!-- UI for Core -->
+                <section>
                     <section>
                         <p>Project Setup</p>
                     </section>
