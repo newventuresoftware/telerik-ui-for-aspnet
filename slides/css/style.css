@@ -63,8 +63,8 @@ h1:after, h2:after, h3:after, h4:after, h5:after {
 
 .reveal .progress-logo-container {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 5px;
+    top: 0;
 }
 
 .reveal #speaker-info {
