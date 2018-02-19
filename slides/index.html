@@ -156,6 +156,27 @@
                         <li class="fragment">Community and Support</li>
                     </ul>
                 </section>
+                <section id="prerequisites">
+                    <h4 class="text-right">Prerequisites</h4>
+                    <ul style="font-size: 32px">
+                        <li><strong>VS 2017</strong>
+                            <a href="https://www.visualstudio.com/vs/">https://www.visualstudio.com/vs/</a>
+                            <ul>
+                                <li>ASP.NET and web development</li>
+                                <li>.NET Core cross-platform development</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Progress Control Panel</strong>
+                            <a href="https://www.telerik.com/download-trial-file/v2/control-panel" target="_blank">
+                                https://www.telerik.com/download-trial-file/v2/control-panel
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Training Materials:</strong> <a href="https://github.com/newventuresoftware/kendoui-for-aspnet/archive/master.zip">https://github.com/newventuresoftware/kendoui-for-aspnet/archive/master.zip</a>
+                        </li>
+                    </ul>
+                </section>
                 <!--ASP.NET MVC -->
                 <section>
                     <section>
@@ -332,37 +353,37 @@ finally
                     <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Directives</h4>
-                    <p><strong>@model</strong><br/><em>specifies the type of the model passed to a view</em></p>
-                    <pre>CSHTML<code class="html">@model LoginViewModel
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@model</strong><br/><em>specifies the type of the model passed to a view</em></p>
+                        <pre>CSHTML<code class="html">@model LoginViewModel
 
-                    <div>The Login Email: @Model.Email</div></code></pre>
+                            <div>The Login Email: @Model.Email</div></code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Directives</h4>
-                    <p><strong>@inherits</strong>, <strong>@inject</strong>, <strong>@functions</strong>, <strong>@section</strong></p>
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@inherits</strong>, <strong>@inject</strong>, <strong>@functions</strong>, <strong>@section</strong></p>
                     </section>
                     <section>
-                    <h3>Html Helpers</h3>
-                    <img alt="" src="./img/Santa's_Little_Helper.png" class="no-border" width="350" />
+                        <h3>Html Helpers</h3>
+                        <img alt="" src="./img/Santa's_Little_Helper.png" class="no-border" width="350" />
                     </section>
                     <section>
-                    <p><em>An <strong>HTML Helper</strong> is just a method that returns a string.</em></p>
-                    <img class="fragment no-border" src="./img/say-what.PNG" width="500" />
+                        <p><em>An <strong>HTML Helper</strong> is just a method that returns a string.</em></p>
+                        <img class="fragment no-border" src="./img/say-what.PNG" width="500" />
                     </section>
                     <section>
-                    <p><strong>HTML Helpers</strong> can be used to render standard HTML tags. They also can be used to render complex content.</p>
+                        <p><strong>HTML Helpers</strong> can be used to render standard HTML tags. They also can be used to render complex content.</p>
                     </section>
                     <section>
-                    <h4 class="text-right">Built-in Helpers</h4>
-                    <ul>
-                    <li>Html.ActionLink()</li>
-                    <li>Html.BeginForm()</li>
-                    <li>Html.DropDownLost()</li>
-                    <li>Html.TextArea()</li>
-                    <li>Html.Partial()</li>
-                    <li>Html.Password()</li>
-                    <li>...</li>
+                        <h4 class="text-right">Built-in Helpers</h4>
+                        <ul>
+                            <li>Html.ActionLink()</li>
+                            <li>Html.BeginForm()</li>
+                            <li>Html.DropDownLost()</li>
+                            <li>Html.TextArea()</li>
+                            <li>Html.Partial()</li>
+                            <li>Html.Password()</li>
+                            <li>...</li>
                         </ul>
                     </section>
                     <section>
@@ -382,21 +403,21 @@ var items = new [] {
 </select></code></pre>
                     </section>
                     <section>
-                    <h3>Live Demo</h3>
-                    <p>Using Html Helpers</p>
+                        <h3>Live Demo</h3>
+                        <p>Using Html Helpers</p>
                     </section>
                     <section>
-                    <h3>Creating Custom Html Helpers</h3>
-                    <ul>
-                    <li>Creating a static method</li>
-                    <li>Writing an extension method</li>
-                    <li>@helper</li>
+                        <h3>Creating Custom Html Helpers</h3>
+                        <ul>
+                            <li>Creating a static method</li>
+                            <li>Writing an extension method</li>
+                            <li>@helper</li>
                         </ul>
                     </section>
                     <section>
-                    <h3>Live Demo</h3>
-                    <p>Creating Custom Html Helpers</p>
-                    <!-- TODO: Include Fluent Syntax in the Demo -->
+                        <h3>Live Demo</h3>
+                        <p>Creating Custom Html Helpers</p>
+                        <!-- TODO: Include Fluent Syntax in the Demo -->
                     </section>
                 </section>
                 <!-- KENDO UI -->
@@ -447,8 +468,9 @@ var items = new [] {
                         <h3>Telerik UI for ASP.NET MVC</h3>
                         <p>Set of server-side wrappers that allows using the Kendo UI widgets from C# or VB.NET code.</p>
                     </section>
-                    <section data-background="./img/Getting+Started.png" class="">
+                    <section data-background="./img/Getting+Started.png">
                         <h2>Getting Started<br/>UI for MVC</h2>
+                        <a href="https://www.telerik.com/aspnet-mvc" target="_blank">Home</a>, <a href="https://docs.telerik.com/aspnet-mvc/introduction" target="_blank">Docs</a>
                     </section>
                     <section>
                         <h3>Project Setup</h3>
@@ -459,7 +481,9 @@ var items = new [] {
                     <section data-background="#430368">
                         <h3>Project Setup</h3>
                         <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
-                        <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
+                        <a href="https://docs.telerik.com/aspnet-mvc/vs-integration/new-project-wizard" target="_blank">
+                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
+                        </a>
                     </section>
                     <section>
                         <h3>
@@ -526,13 +550,87 @@ var items = new [] {
                         <p>ASP.NET Core TagHelpers</p>
                     </section>
                     <section>
-                        <p>Project Setup</p>
+                        <h4 class="text-right">What are Tag Helpers?</h4>
+                        <ul style="font-size: 0.7em">
+                            <li class="fragment">Allow server-side code to participate in rendering of HTML elements in Razor files</li>
+                            <li class="fragment">Target HTML elements based on element and attribute names</li>
+                            <li class="fragment">Reduce explicit transitions between HTML and C# in Razor files</li>
+                            <li class="fragment">Take advantage of the composition and tooling benefits of HTML in Visual Studio</li>
+                        </ul>
                     </section>
                     <section>
-                        <p>Using Widgets</p>
+                        <h4 class="text-right">Using Tag Helpers?</h4>
+                        <ul style="font-size: 0.7em">
+                            <li>ASP.NET MVC 6 includes Tag Helpers for common tasks e.g. creating forms, links etc.</li>
+                            <li class="fragment">
+                                Import desired Tag Helpers into the Razor page:
+                                <pre><code>@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"</code></pre>
+                            </li>
+                            <li class="fragment">
+                                Optionally specify a prefix to enable an element for Tag Helper processing:
+                                <pre><code>@tagHelperPrefix "+"</code></pre>
+                            </li>
+                            <li class="fragment">
+                                Use like HTML:
+                                <pre><code><a asp-controller="Home" asp-action="Index">Home</a></code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section data-background="#000">
+                        <h3>Live Demo</h3>
+                        <p>Using Tag Helpers</p>
+                        <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
                     </section>
                     <section>
-                        <p>DataSource and Common Features</p>
+                        <h4 class="text-right">Creating Tag Helpers</h4>
+                        <ul style="font-size: 0.7em">
+                            <li>
+                                Three logical types of Tag Helpers:
+                                <ul>
+                                    <li>Target existing HTML elements & modify output, e.g. <strong>&lt;input /&gt;</strong></li>
+                                    <li>Define new elements & produce custom output, e.g. <strong>&lt;carousel&gt;</strong></li>
+                                    <li>Define new elements wiht no output, e.g. &lt;environment /&gt;</li>
+                                </ul>
+                            </li>
+                            <li>Tag Helpers are classes that implement <code>ITagHelper</code></li>
+                            <li>
+                                No complicated lifecycle, just a single <code>Process</code> method
+                                <pre><code class="csharp">public void Process(TagHelperContext context, TagHelperOutput output)</code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section data-background="#000">
+                        <h3>Live Demo</h3>
+                        <p>Creating Custom Tag Helpers</p>
+                        <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
+                    </section>
+                    <section>
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="docs.asp.net" target="_blank">docs.asp.net</a></li>
+                            <li><a href="github.com/aspnet/razor" target="_blank">github.com/aspnet/razor</a></li>
+                            <li><a href="github.com/aspnet/mvc" target="_blank">github.com/aspnet/mvc</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Telerik UI for ASP.NET Core</h3>
+                        <p>Telerik UI for ASP.NET Core is a set of server-side wrappers that allows using the Kendo UI widgets in .NET Core.</p>
+                    </section>
+                    <section data-background="./img/Getting+Started.png">
+                        <h3>Getting Started <br/> UI for ASP.NET Core</h3>
+                        <a href="https://www.telerik.com/aspnet-core-ui" target="_blank">Home</a>,
+                        <a href="https://docs.telerik.com/aspnet-core/introduction" target="_blank">Docs</a>
+                    </section>
+                    <section  data-background="#430368">
+                        <h3>Project Setup</h3>
+                        <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
+                        <a href="https://docs.telerik.com/aspnet-core/getting-started/getting-started" target="_blank">
+                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
+                        </a>
+                    </section>
+                    <section>
+                        <h3>Using Widgets</h3>
+                        <a href="https://docs.telerik.com/aspnet-core/helpers/tag-helpers/tag-helpers" target="_blank">Docs</a>
                     </section>
                 </section>
                 <!-- Common Features -->
