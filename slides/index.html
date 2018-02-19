@@ -512,14 +512,6 @@ var items = new [] {
                         </ul>
                     </section>
                     <section>
-                        <h3>DataSource</h3>
-                        <ul>
-                            <li class="fragment grow">Custom DataSource</li>
-                            <li class="fragment grow">DataSourceRequest</li>
-                            <li class="fragment grow">DataSourceResult</li>
-                        </ul>
-                    </section>
-                    <section>
                         <h3>Validation</h3>
                         <p>
                             <a href="https://docs.telerik.com/aspnet-mvc/getting-started/validation" target="_blank">Using the Data-Annotation Attributes</a>
@@ -537,8 +529,19 @@ var items = new [] {
                     <section data-background="#000">
                         <img alt="" src="./img/netcore.svg" class="no-border bg-transparent" width="400" />
                     </section>
+                    <section data-background="black">
+                        <p style="color: gold"><em>One name to rule them all...</em></p>
+                        <p>
+                            <span class="fragment highlight-strikethrough">ASP.NET vNext</span> <br/>
+                            <span class="fragment highlight-strikethrough">ASP.NET 5</span> <br/>
+                            <span class="fragment highlight-strikethrough">ASP.NET MVC 6</span><br/>
+                            <span class="fragment highlight-green">ASP.NET Core</span>
+                        </p>
+                    </section>
                     <section>
-                        <p>Core</p>
+                        <h3>ASP.NET Core</h3>
+                        <p>Open-source and cross-platform framework</p>
+                        <p>Redesign of ASP.NET</p>
                     </section>
                     <section>
                         <p>Core vs MVC</p>
@@ -564,17 +567,32 @@ var items = new [] {
                             <li>ASP.NET MVC 6 includes Tag Helpers for common tasks e.g. creating forms, links etc.</li>
                             <li class="fragment">
                                 Import desired Tag Helpers into the Razor page:
-                                <pre><code>@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"</code></pre>
+                                <pre style="font-size: 0.9em"><code>@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"</code></pre>
                             </li>
                             <li class="fragment">
                                 Optionally specify a prefix to enable an element for Tag Helper processing:
-                                <pre><code>@tagHelperPrefix "+"</code></pre>
+                                <pre style="font-size: 0.9em"><code>@tagHelperPrefix "+"</code></pre>
                             </li>
                             <li class="fragment">
                                 Use like HTML:
-                                <pre><code><a asp-controller="Home" asp-action="Index">Home</a></code></pre>
+                                <pre style="font-size: 0.9em"><code><a asp-controller="Home" asp-action="Index">Home</a></code></pre>
                             </li>
                         </ul>
+                    </section>
+                    <section>
+                        <h3>Tag Helpers over Html Helpers</h3>
+                        <ul>
+                            <li>Cleaner Syntax</li>
+                            <li>More control over the markup</li>
+                            <li>Intellisense</li>
+                        </ul>
+                        <pre><code>// Before - HTML Helpers
+@Html.ActionLink("Click me", "MyController", "MyAction",
+    { @class="my-css-classname", data_my_attr="my-attribute"}) 
+
+// After - Tag Helpers
+&lt;a asp-controller="MyController" asp-action="MyAction"
+   class="my-css-classname" my-attr="my-attribute"&gt;Click me&lt;/a&gt;</code></pre>
                     </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
@@ -632,17 +650,34 @@ var items = new [] {
                         <h3>Using Widgets</h3>
                         <a href="https://docs.telerik.com/aspnet-core/helpers/tag-helpers/tag-helpers" target="_blank">Docs</a>
                     </section>
+                    <section data-background="./img/bg-pattern.png" class="color-white" id="theme-builder">
+                        <a href="http://themebuilder.telerik.com/aspnet-core" target="_blank">
+                            <img alt="" src="./img/progress_mainLogo.png" class="no-border bg-transparent" width="700" />
+                        </a>
+                        <p>For ASP.NET Core</p>
+                    </section>
                 </section>
                 <!-- Common Features -->
                 <section>
+                    <section>
+                        <h3>Working with Kendo DataSource</h3>
+                        <ul>
+                            <li class="fragment grow">Custom DataSource</li>
+                            <li class="fragment grow">DataSourceRequest</li>
+                            <li class="fragment grow">DataSourceResult</li>
+                        </ul>
+                    </section>
                     <section>
                         <p>Responsive Design</p>
                     </section>
                 </section>
                 <!-- Support and Community -->
                 <section>
-                    <section>
-                        <p>Submitting Support Tickets</p>
+                    <section data-background="#353334">
+                        <h3>Submitting Support Tickets</h3>
+                        <a href="https://www.telerik.com/support/kendo-ui" target="_blank">
+                            <img width="500" src="./img/Have-You-Tried-Chewing-On-The-Cable-Funny-Meme-Picture.jpg" />
+                        </a>
                     </section>
                     <section>
                         <p>Community: GitHub, Roadmap, Forums</p>

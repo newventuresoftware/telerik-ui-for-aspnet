@@ -200,3 +200,19 @@ h1:after, h2:after, h3:after, h4:after, h5:after {
 #using-kendo-with-other-frameworks ul > li > a:hover {
     color: #fff;
 }
+
+.reveal .slides section .fragment.highlight-strikethrough,
+.reveal .slides section .fragment.highlight-current-strikethrough {
+    opacity: 1;
+    visibility: visible;
+}
+
+.reveal .slides section .fragment.highlight-strikethrough.visible {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.reveal .slides section .fragment.highlight-current-strikethrough.current-fragment {
+    color: gray;
+    text-decoration: line-through;
+}
