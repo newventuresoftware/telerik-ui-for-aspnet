@@ -240,101 +240,93 @@
                         <img alt="" src="./img/template-diagram.jpg" class="no-border" />
                     </section>
                     <section>
-                    <p><strong>Razor</strong> supports C# and uses the <strong>@</strong> symbol to transition from HTML to C#</p>
+                        <p><strong>Razor</strong> supports C# and uses the <strong>@</strong> symbol to transition from HTML to C#</p>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Implicitit Expressions</h4>
-                        <pre>CSHTML<code class="html">
-                    <p>@DateTime.Now</p>
-                    <p>@DateTime.IsLeapYear(2016)</p>
-                        </code></pre>
-                    <pre>HTML<code class="html">
-                    <p>9.2.2018 г. 10:49:34</p>
-                    <p>True</p>
-                        </code></pre>
+                        <pre>CSHTML<code class="html"><p>@DateTime.Now</p>
+<p>@DateTime.IsLeapYear(2016)</p></code></pre>
+                    <pre>HTML<code class="html"><p>9.2.2018 г. 10:49:34</p>
+<p>True</p></code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Explicit Expressions</h4>
-                    <pre>CSHTML<code class="html">
-                    <p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
-                        </code></pre>
-                    <pre>HTML<code class="html">
-                    <p>Last week this time: 2.2.2018 г. 10:55:00</p>
-                        </code></pre>
+                        <h4 class="text-right">Razor - Explicit Expressions</h4>
+                        <pre>CSHTML<code class="html"><p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p></code></pre>
+                        <pre>HTML<code class="html"><p>Last week this time: 2.2.2018 г. 10:55:00</p></code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Code Blocks</h4>
-                    <pre>CSHTML<code class="html">@{
+                        <h4 class="text-right">Razor - Code Blocks</h4>
+                        <pre>CSHTML<code class="html">@{
     var message = "You are the Semicolon to my Statements.";
 }
-                    <p>@message</p>
+<p>@message</p>
 
 @{
     message = "Deleted code is debugged code.";
 }
-                    <p>@message</p></code></pre>
+<p>@message</p></code></pre>
                     <pre>HTML <code class="html"><p>You are the Semicolon to my Statements.</p>
-                    <p>Deleted code is debugged code.</p></code></pre>
+<p>Deleted code is debugged code.</p></code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Control Structures</h4>
-                    <p>Conditionals <strong>@if</strong>, <strong>else if</strong>, <strong>else</strong>, and <strong>@switch</strong></p>
-                    <pre>CSHTML<code class="html">@if (value % 2 == 0)
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p>Conditionals <strong>@if</strong>, <strong>else if</strong>, <strong>else</strong>, and <strong>@switch</strong></p>
+                        <pre>CSHTML<code class="html">@if (value % 2 == 0)
 {
-                    <p>The value was even.</p>
+    <p>The value was even.</p>
 }
 else
 {
-                    <p>The value was odd.</p>
+    <p>The value was odd.</p>
 }</code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Control Structures</h4>
-                    <pre>CSHTML <code class="html">@switch (value)
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <pre>CSHTML <code class="html">@switch (value)
 {
     case 1:
-                    <p>The value is 1!</p>
+        <p>The value is 1!</p>
         break;
     case 1337:
-                    <p>Your number is 1337!</p>
+        <p>Your number is 1337!</p>
         break;
     default:
-                    <p>Your number wasn't 1 or 1337.</p>
+        <p>Your number wasn't 1 or 1337.</p>
         break;
 }</code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Control Structures</h4>
-                    <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
                     <pre>CSHTML <code class="html">@foreach (var person in people)
 {
-                    <p>Name: @person.Name</p>
-                    <p>Age: @person.Age</p>
+    <p>Name: @person.Name</p>
+    <p>Age: @person.Age</p>
 }</code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Control Structures</h4>
-                    <pre>CSHTML <code class="html">@for (var i = 0; i < people.Length; i++)
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <pre>CSHTML <code class="html">@for (var i = 0; i < people.Length; i++)
 {
     var person = people[i];
-                    <p>Name: @person.Name</p>
-                    <p>Age: @person.Age</p>
+    <p>Name: @person.Name</p>
+    <p>Age: @person.Age</p>
 }</code></pre>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Control Structures</h4>
-                    <p><strong>@try, catch, finally</strong></p>
+                        <h4 class="text-right">Razor - Control Structures</h4>
+                        <p><strong>@try, catch, finally</strong></p>
                     <pre>CSHTML <code class="html">@try
 {
     throw new InvalidOperationException("You did something invalid.");
 }
 catch (Exception ex)
 {
-                    <p>The exception message: @ex.Message</p>
+    <p>The exception message: @ex.Message</p>
 }
 finally
 {
-                    <p>The finally statement.</p>
+    <p>The finally statement.</p>
 }</code></pre>
                     </section>
                     <section>
@@ -349,7 +341,7 @@ finally
     var dir = Directory.GetCurrentDirectory();
 }
 
-                    <p>@dir</p></code></pre>
+<p>@dir</p></code></pre>
                     <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
                     </section>
                     <section>
@@ -357,7 +349,7 @@ finally
                         <p><strong>@model</strong><br/><em>specifies the type of the model passed to a view</em></p>
                         <pre>CSHTML<code class="html">@model LoginViewModel
 
-                            <div>The Login Email: @Model.Email</div></code></pre>
+<div>The Login Email: @Model.Email</div></code></pre>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
@@ -397,9 +389,9 @@ var items = new [] {
 
 @Html.DropDownList("Quantity", items)</code></pre>
                     <pre>HTML <code class="html"><select id="Quantity" name="Quantity">
-                    <option value="1">One</option>
-                    <option value="5">Five</option>
-                    <option value="10">Ten</option>
+    <option value="1">One</option>
+    <option value="5">Five</option>
+    <option value="10">Ten</option>
 </select></code></pre>
                     </section>
                     <section data-background="#000">
