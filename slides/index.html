@@ -180,7 +180,7 @@
                 <!--ASP.NET MVC -->
                 <section>
                     <section>
-                        <h3>The MVC Pattern</h3>
+                        <h3>Recap - The MVC Pattern</h3>
                         <img alt="" src="./img/mvc.png" width="600" class="no-border" />
                     </section>
                     <section>
@@ -232,14 +232,14 @@
                             <img alt="" src="./img/ASP.NETMVC5Pipeline.png" class="no-border" width="550" />
                         </a>
                     </section>
-                    <section>
+                    <section data-background="#fff">
                         <h3>The Razor View Engine</h3>
                         <p>
                             <em>Simple-syntax <strong>view engine</strong> and was released as part of MVC 3</em>
                         </p>
                         <img alt="" src="./img/template-diagram.jpg" class="no-border" />
                     </section>
-                    <section>
+                    <section data-background="#353334">
                         <p><strong>Razor</strong> supports C# and uses the <strong>@</strong> symbol to transition from HTML to C#</p>
                     </section>
                     <section>
@@ -268,7 +268,7 @@
                     <pre>HTML <code class="html"><p>You are the Semicolon to my Statements.</p>
 <p>Deleted code is debugged code.</p></code></pre>
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p>Conditionals <strong>@if</strong>, <strong>else if</strong>, <strong>else</strong>, and <strong>@switch</strong></p>
                         <pre>CSHTML<code class="html">@if (value % 2 == 0)
@@ -280,7 +280,7 @@ else
     <p>The value was odd.</p>
 }</code></pre>
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <pre>CSHTML <code class="html">@switch (value)
 {
@@ -295,7 +295,7 @@ else
         break;
 }</code></pre>
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
                     <pre>CSHTML <code class="html">@foreach (var person in people)
@@ -304,7 +304,7 @@ else
     <p>Age: @person.Age</p>
 }</code></pre>
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <pre>CSHTML <code class="html">@for (var i = 0; i < people.Length; i++)
 {
@@ -313,7 +313,7 @@ else
     <p>Age: @person.Age</p>
 }</code></pre>
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p><strong>@try, catch, finally</strong></p>
                     <pre>CSHTML <code class="html">@try
@@ -330,19 +330,19 @@ finally
 }</code></pre>
                     </section>
                     <section>
-                    <h3>Razor Directives</h3>
-                    <p>Implicit expressions with reserved keywords following the <strong>@</strong> symbol.</p>
+                        <h3>Razor Directives</h3>
+                        <p>Implicit expressions with reserved keywords following the <strong>@</strong> symbol.</p>
                     </section>
                     <section>
-                    <h4 class="text-right">Razor - Directives</h4>
-                    <p><strong>@using</strong></p>
-                    <pre>CSHTML<code class="html">@using System.IO
+                        <h4 class="text-right">Razor - Directives</h4>
+                        <p><strong>@using</strong></p>
+                        <pre>CSHTML<code class="html">@using System.IO
 @{
     var dir = Directory.GetCurrentDirectory();
 }
 
 <p>@dir</p></code></pre>
-                    <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
+                        <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
@@ -359,14 +359,14 @@ finally
                         <h3>Html Helpers</h3>
                         <img alt="" src="./img/Santa's_Little_Helper.png" class="no-border" width="350" />
                     </section>
-                    <section>
+                    <section data-background="#353334">
                         <p><em>An <strong>HTML Helper</strong> is just a method that returns a string.</em></p>
                         <img class="fragment no-border" src="./img/say-what.PNG" width="500" />
                     </section>
-                    <section>
+                    <section data-background="#353334">
                         <p><strong>HTML Helpers</strong> can be used to render standard HTML tags. They also can be used to render complex content.</p>
                     </section>
-                    <section>
+                    <section data-background="#353334">
                         <h4 class="text-right">Built-in Helpers</h4>
                         <ul>
                             <li>Html.ActionLink()</li>
@@ -423,7 +423,7 @@ var items = new [] {
                     </section>
                     <section data-background="./img/umbrella-bg.jpg" class="color-white">
                         <div class="circle-wrapper">
-                            <div class="circle center"><strong class="brackets">Kendo UI</strong></div>
+                            <div class="circle center" style="background-color: #60BEA0"><strong class="brackets">Kendo UI</strong></div>
                             <div class="circle top fragment">Components</div>
                             <div class="circle top-right fragment">Data Source</div>
                             <div class="circle right fragment">Validation</div>
@@ -623,7 +623,7 @@ var items = new [] {
                     </section>
                     <section>
                         <h4 class="text-right">What are Tag Helpers?</h4>
-                        <ul style="font-size: 0.7em">
+                        <ul style="font-size: 0.8em">
                             <li class="fragment">Allow server-side code to participate in rendering of HTML elements in Razor files</li>
                             <li class="fragment">Target HTML elements based on element and attribute names</li>
                             <li class="fragment">Reduce explicit transitions between HTML and C# in Razor files</li>
@@ -691,7 +691,7 @@ var items = new [] {
                         <p>Creating Custom Tag Helpers</p>
                         <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
                     </section>
-                    <section>
+                    <section data-background="./img/telerik-bg.jpg">
                         <h3>Resources</h3>
                         <ul>
                             <li><a href="docs.asp.net" target="_blank">docs.asp.net</a></li>
@@ -715,9 +715,10 @@ var items = new [] {
                             <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
                         </a>
                     </section>
-                    <section>
-                        <h3>Using Widgets</h3>
-                        <a href="https://docs.telerik.com/aspnet-core/helpers/tag-helpers/tag-helpers" target="_blank">Docs</a>
+                    <section data-background="#000">
+                        <h3>Live Demo</h3>
+                        <p><a href="https://docs.telerik.com/aspnet-core/helpers/tag-helpers/tag-helpers" target="_blank" style="color: #328AD1">Using Widgets</a></p>
+                        <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
                     </section>
                     <section data-background="./img/bg-pattern.png" class="color-white">
                         <a href="http://themebuilder.telerik.com/aspnet-core" target="_blank">
@@ -728,12 +729,12 @@ var items = new [] {
                 </section>
                 <!-- Common Features -->
                 <section>
-                    <section>
-                        <h3>Working with Kendo DataSource</h3>
+                    <section data-background="#353334">
+                        <h3>Working with the Kendo DataSource</h3>
                         <ul>
                             <li class="fragment grow">Custom DataSource</li>
-                            <li class="fragment grow">DataSourceRequest</li>
-                            <li class="fragment grow">DataSourceResult</li>
+                            <li class="fragment grow"><strong><code>DataSourceRequest</code></strong></li>
+                            <li class="fragment grow"><strong><code>DataSourceResult</code></strong></li>
                         </ul>
                     </section>
                     <section>
