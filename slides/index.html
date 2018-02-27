@@ -222,34 +222,93 @@
                     <section>
                         <h3>Recap - The MVC Pattern</h3>
                         <img alt="" src="./img/mvc.png" width="600" class="no-border" />
+                        <aside class="notes">
+                            <p>
+                                Before I start digging into the details of the ASP.NET MVC Framework, I want to make sure you are familiar with the MVC
+                                design pattern and the thinking behind it. You might be familiar with some of the ideas and conventions I discuss in this section, especially if you have done advanced
+                                ASP.NET or C# development. If not, I encourage you to pay attention carefully — a good understanding of what lies behind MVC can help
+                                put the features of the framework into context as you continue through the training.
+                            </p>
+                            <p>
+                                The term model-view-controller has been in use since the late 1970s and arose from the Smalltalk project at Xerox, where it
+                                was conceived as a way to organize some early GUI applications.
+                            </p>
+                            <p>
+                                Interactions with an MVC application follow a natural cycle of user actions and view updates, where the view is assumed to be
+                                stateless. This fits nicely with the HTTP requests and responses that underpin a Web application. Further, MVC forces a separation of concerns—the domain model and controller logic are decoupled from the user interface. In
+                                a Web application, this means that the HTML is kept apart from the rest of the application, which makes maintenance and testing
+                                simpler and easier. It was Ruby on Rails that led to renewed mainstream interest in MVC and it remains the implementation
+                                template for the MVC pattern. Many other MVC frameworks have since emerged and demonstrated the benefits of MVC—
+                                including, of course, ASP.NET MVC.
+                            </p>
+                        </aside>
                     </section>
                     <section>
                         <h3>Models</h3>
                         <p>
                             Contain or represent the data that users work with.
                         </p>
+                        <aside class="notes">
+                            <p>In high-level terms, the MVC pattern means that an MVC application will be split into at least three pieces:</p>
+                            <p>
+                                Models, which contain or represent the data that users work with.
+                            </p>
+                        </aside>
                     </section>
                     <section>
                         <h3>View Models</h3>
                         <p>Represent data being transferred between views and controllers.</p>
+                        <aside class="notes">
+                            <p>These can be simple view models, which just represent
+                                data being transferred between views and controllers;</p>
+                        </aside>
                     </section>
                     <section>
                         <h3>Domain Models</h3>
                         <p>
                             Contain the data in a business domain as well as the operations, transformations, and rules for manipulating that data.
                         </p>
+                        <aside class="notes">
+                            <p>Or they can be domain models, which contain the data in a business
+                                domain as well as the operations, transformations, and rules for manipulating that data.</p>
+                        </aside>
                     </section>
                     <section>
                         <h3>Views</h3>
                         <p>Used to render some part of the model as a user interface.</p>
+                        <aside class="notes">
+                            <p>Which are used to render some part of the model as a user interface.</p>
+                        </aside>
                     </section>
                     <section>
                         <h3>Controllers</h3>
                         <p>Process incoming requests, perform operations on the model, and select views to render to the user.</p>
+                        <aside class="notes">
+                            <p>Which process incoming requests, perform operations on the model, and select views to render to the user.</p>
+                        </aside>
                     </section>
                     <section>
                         <p><em>Loosely cooupled components</em></p>
                         <img alt="MVC" src="./img/mvc-annotated.png" class="no-border" width="750" />
+                        <aside class="notes">
+                            <p>
+                                Models are the definition of the universe your application works in. In a banking application, for example, the model represents
+                                everything in the bank that the application supports, such as accounts, the general ledger, and credit limits for customers—as well
+                                as the operations that can be used to manipulate the data in the model, such as depositing funds and making withdrawals from the
+                                accounts. The model is also responsible for preserving the overall state and consistency of the data—for example, making sure
+                                that all transactions are added to the ledger, and that a client doesn’t withdraw more money than he is entitled to or more money
+                                than the bank has.
+                                Models are also defined by what they are not responsible for: models don’t deal with rendering UIs or processing requests—
+                                those are the responsibilities of views and controllers. Views contain the logic required to display elements of the model to the user
+                                —and nothing more. They have no direct awareness of the model and do not directly communicate with the model in any way.
+                                Controllers are the bridge between views and the model—requests come in from the client and are serviced by the controller,
+                                which selects an appropriate view to show the user and, if required, an appropriate operation to perform on the model.
+                                Each piece of the MVC architecture is well-defined and self-contained—this is referred to as the separation of concerns. The
+                                logic that manipulates the data in the model is contained only in the model; the logic that displays data is only in the view, and the
+                                code that handles user requests and input is contained only in the controller. With a clear division between each of the pieces, your
+                                application will be easier to maintain and extend over its lifetime, no matter how large it becomes.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#333333">
                         <img alt="" src="./img/logo-aspnetmvc.png" class="no-border" />
@@ -269,7 +328,12 @@
                     </section>
                     <section data-background="#fff">
                         <a href="https://www.slideshare.net/llysik/aspnet-mvc-4-request-pipeline-internals" target="_blank">
-                            <img alt="" src="./img/ASP.NETMVC5Pipeline.png" class="no-border" width="550" />
+                            <img alt="" src="./img/mvc-pipeline.PNG" class="no-border" />
+                            <aside class="notes">
+                                <p>When a request is sent to the URL associated with an action method, the statements in the controller
+                                    class are executed in order to perform some operation on the domain model and then select a view to display to the client. Figure
+                                    3-1 shows the interactions between the controller, model, and view.</p>
+                            </aside>
                         </a>
                     </section>
                     <section data-background="#fff">
@@ -278,9 +342,16 @@
                             <em>Simple-syntax <strong>view engine</strong> and was released as part of MVC 3</em>
                         </p>
                         <img alt="" src="./img/template-diagram.jpg" class="no-border" />
+                        <aside class="notes">
+                            <p>The ASP.NET MVC Framework uses a view engine, which is the component responsible for processing a view in order to
+                                generate a response for the browser. Earlier versions of MVC used the standard ASP.NET view engine, which processed ASPX
+                                pages using a streamlined version of the Web Forms markup syntax. MVC 3 introduced the Razor view engine, which was refined
+                                in MVC 4 (and unchanged in MVC5) and that uses a different syntax entirely</p>
+                        </aside>
                     </section>
                     <section data-background="#353334">
                         <p><strong>Razor</strong> supports C# and uses the <strong>@</strong> symbol to transition from HTML to C#</p>
+                        <a href="https://dotnetfiddle.net/CsMvc" target="_blank" style="color: lightblue">Playground</a>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Implicitit Expressions</h4>
@@ -307,6 +378,9 @@
 <p>@message</p></code></pre>
                     <pre>HTML <code class="html"><p>You are the Semicolon to my Statements.</p>
 <p>Deleted code is debugged code.</p></code></pre>
+                    <aside class="notes">
+                        <p>Unlike expressions, C# code inside code blocks isn't rendered. Code blocks and expressions in a view share the same scope and are defined in order:</p>
+                    </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
@@ -319,6 +393,9 @@ else
 {
     <p>The value was odd.</p>
 }</code></pre>
+                        <aside class="notes">
+                            <p>Control structures are an extension of code blocks. All aspects of code blocks (transitioning to markup, inline C#) also apply to the following structures.</p>
+                        </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
@@ -338,20 +415,25 @@ else
                     <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
                         <p>Looping <strong>@for</strong>, <strong>@foreach</strong>, <strong>@while</strong>, and <strong>@do while</strong></p>
-                    <pre>CSHTML <code class="html">@foreach (var person in people)
+                        <pre>CSHTML <code class="html">&lt;ul&gt;
+@foreach (var person in people)
 {
-    <p>Name: @person.Name</p>
-    <p>Age: @person.Age</p>
-}</code></pre>
+    <li>Name: @person.Name, Age: @person.Age</li>
+}
+&lt;/ul&gt;</code></pre>
+                        <aside class="notes">
+                            <p>Templated HTML can be rendered with looping control statements. To render a list of people:</p>
+                        </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
-                        <pre>CSHTML <code class="html">@for (var i = 0; i < people.Length; i++)
+                        <pre>CSHTML <code class="html">&lt;ul&gt;
+@for (var i = 0; i < people.Length; i++)
 {
     var person = people[i];
-    <p>Name: @person.Name</p>
-    <p>Age: @person.Age</p>
-}</code></pre>
+    <li>Name: @person.Name, Age: @person.Age</li>
+}
+&lt;/ul&gt;</code></pre>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <h4 class="text-right">Razor - Control Structures</h4>
@@ -372,6 +454,9 @@ finally
                     <section>
                         <h3>Razor Directives</h3>
                         <p>Implicit expressions with reserved keywords following the <strong>@</strong> symbol.</p>
+                        <aside class="notes">
+                            <p>Razor directives are represented by implicit expressions with reserved keywords following the @ symbol. A directive typically changes the way a view is parsed or enables different functionality.</p>
+                        </aside>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
@@ -383,6 +468,7 @@ finally
 
 <p>@dir</p></code></pre>
                         <pre>HTML<code class="html"><p>C:\Program Files (x86)\IIS Express</p></code></pre>
+                        
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
@@ -390,6 +476,9 @@ finally
                         <pre>CSHTML<code class="html">@model LoginViewModel
 
 <div>The Login Email: @Model.Email</div></code></pre>
+                        <aside class="notes">
+                            <p>The @model directive specifies the type of the model passed to a view:</p>
+                        </aside>
                     </section>
                     <section>
                         <h4 class="text-right">Razor - Directives</h4>
@@ -402,6 +491,13 @@ finally
                     <section data-background="#353334">
                         <p><em>An <strong>HTML Helper</strong> is just a method that returns a string.</em></p>
                         <img class="fragment no-border" src="./img/say-what.PNG" width="500" />
+                        <aside class="notes">
+                            <p>
+                                The string can represent any type of content that you want. For example, you can use HTML Helpers to render
+                                standard HTML tags like HTML input and img tags. You also can use HTML Helpers to render
+                                more complex content such as a tab strip or an HTML table of database data.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#353334">
                         <p><strong>HTML Helpers</strong> can be used to render standard HTML tags. They also can be used to render complex content.</p>
@@ -411,7 +507,7 @@ finally
                         <ul>
                             <li>Html.ActionLink()</li>
                             <li>Html.BeginForm()</li>
-                            <li>Html.DropDownLost()</li>
+                            <li>Html.DropDownList()</li>
                             <li>Html.TextArea()</li>
                             <li>Html.Partial()</li>
                             <li>Html.Password()</li>
@@ -446,6 +542,13 @@ var items = new [] {
                             <li>Writing an extension method</li>
                             <li>@helper</li>
                         </ul>
+                        <aside class="notes">
+                            <p>
+                                The ASP.NET MVC framework contains a small set of helpers. Most likely, you will need to
+                                extend the MVC framework with custom HTML Helpers. In the remainder of this tutorial, you learn
+                                two methods of creating custom HTML Helpers.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
@@ -459,7 +562,12 @@ var items = new [] {
                     <section data-background="./img/umbrella-bg.jpg">
                         <h3 class="color-white"><span>Kendo UI</span></h3>
                         <img alt="" src="./img/kendoka-states1.png" class="no-border bg-transparent" width="200" style="margin: 0" />
-                        <p class="color-white" style="font-size: 0.8em"><span>A complete JavaScript UI component library, built on top of jQuery, that allows you to quickly build web apps using your framework of choice.</span></p>
+                        <p class="color-white" style="font-size: 0.8em"><span>Build Better Web Apps Faster</span></p>
+                        <aside class="notes">
+                            <p>
+                                A complete JavaScript UI component library, built on top of jQuery, that allows you to quickly build web apps using your framework of choice.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="./img/umbrella-bg.jpg" class="color-white">
                         <div class="circle-wrapper">
@@ -557,6 +665,10 @@ var items = new [] {
                         </a>
                         <p>For ASP.NET MVC</p>
                     </section>
+                    <section>
+                        <h3>Demo App</h3>
+                        <a href="https://github.com/telerik/kendoui-northwind-dashboard" target="_blank">Northwind Dashboard</a>
+                    </section>
                 </section>
                 <!-- UI for ASP.NET Core -->
                 <section>
@@ -564,9 +676,29 @@ var items = new [] {
                         <a href="https://docs.microsoft.com/en-us/dotnet/core/index" target="_blank">
                             <img alt="" src="./img/netcore.svg" class="no-border bg-transparent" width="400" />
                         </a>
+                        <aside class="notes">
+                            <p>
+                                .NET Core is a general purpose development platform maintained by Microsoft and the .NET community on GitHub. It is cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <img class="no-border" src="./img/net-core.png" />
+                        <aside class="notes">
+                            <p>.NET Core is composed of the following parts:
+
+                                <ul>
+                                    <li>A .NET runtime, which provides a type system, assembly loading, a garbage collector, native interop and other basic services.
+                                    </li>
+                                    <li>A set of framework libraries, which provide primitive data types, app composition types and fundamental utilities.
+                                    </li>
+                                    <li>A set of SDK tools and language compilers that enable the base developer experience, available in the .NET Core SDK.
+                                    </li>
+                                    <li>The 'dotnet' app host, which is used to launch .NET Core apps. It selects the runtime and hosts the runtime, provides an assembly loading policy and launches the app. The same host is also used to launch SDK tools in much the same way.
+                                    </li>
+                                </ul>
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="black">
                         <p style="color: gold"><em>One name to rule them all...</em></p>
@@ -580,6 +712,35 @@ var items = new [] {
                         <h3>ASP.NET Core</h3>
                         <p>Open-source and cross-platform web framework</p>
                         <p>Redesign of ASP.NET</p>
+                        <aside class="notes">
+                            ASP.NET Core is a redesign of ASP.NET 4.x, with architectural changes that result in a leaner, more modular framework.
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>ASP.NET Core</h4>
+                        <ul>
+                            <li class="fragment">
+                                A unified story for building web UI and web APIs.
+                            </li>
+                            <li class="fragment">
+                                A cloud-ready, environment-based configuration system.
+                            </li>
+                            <li class="fragment">
+                                Built-in dependency injection.
+                            </li>
+                            <li class="fragment">
+                                A lightweight, high-performance, and modular HTTP request pipeline.
+                            </li>
+                            <li class="fragment">
+                                Ability to host on IIS, Nginx, Apache, Docker, or self-host in your own process.
+                            </li>
+                            <li class="fragment">
+                                Side-by-side app versioning when targeting .NET Core.
+                            </li>
+                            <li class="fragment">
+                                Ability to build and run on Windows, macOS, and Linux.
+                            </li>
+                        </ul>
                     </section>
                     <section>
                         <table style="font-size: 0.6em">
@@ -617,6 +778,29 @@ var items = new [] {
                             </tbody>
                         </table>
                     </section>
+                    <section>
+                        <h3>ASP.NET Core MVC</h3>
+                        <p>Building web APIs and web apps</p>
+                        <aside class="notes">
+                            <p>a.k.a. MVC 6</p>
+                            <ul>
+                                <li>The Model-View-Controller (MVC) pattern helps make your web APIs and web apps testable.
+                                </li>
+                                <li>Razor Pages (new in ASP.NET Core 2.0) is a page-based programming model that makes building web UI easier and more productive.
+                                </li>
+                                <li>Razor markup provides a productive syntax for Razor Pages and MVC views.
+                                </li>
+                                <li>Tag Helpers enable server-side code to participate in creating and rendering HTML elements in Razor files.
+                                </li>
+                                <li>Built-in support for multiple data formats and content negotiation lets your web APIs reach a broad range of clients, including browsers and mobile devices.
+                                </li>
+                                <li>Model binding automatically maps data from HTTP requests to action method parameters.
+                                </li>
+                                <li>Model validation automatically performs client- and server-side validation.
+                                </li>
+                            </ul>
+                        </aside>
+                    </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <h3>Razor Pages</h3>
                         <ul style="font-size: 0.9em">
@@ -627,6 +811,10 @@ var items = new [] {
                             <li class="fragment"><strong>*Not*</strong> the new version ASP.NET Web Pages attempt</li>
                             <li class="fragment"><strong>*Not*</strong> only for "simple" scenarios</li>
                         </ul>
+                        <aside class="notes">
+                            Razor Pages is a new feature of ASP.NET Core MVC that makes coding page-focused scenarios easier and more productive. We can use
+                            either Razor Pages or the classical Model-View-Controller approach for creating web apps, but Razor pages is the recommended approach.
+                        </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
                         <p>It <strong>*is*</strong> MVC</p>
@@ -667,7 +855,7 @@ var items = new [] {
                             <li class="fragment">Target HTML elements based on element and attribute names</li>
                             <li class="fragment">Reduce explicit transitions between HTML and C# in Razor files</li>
                             <li class="fragment">Take advantage of the composition and tooling benefits of HTML in Visual Studio</li>
-                        </ul>
+                        </ul> 
                     </section>
                     <section>
                         <h4 class="text-right">Using Tag Helpers?</h4>
@@ -701,6 +889,16 @@ var items = new [] {
 // After - Tag Helpers
 &lt;a asp-controller="MyController" asp-action="MyAction"
    class="my-css-classname" my-attr="my-attribute"&gt;Click me&lt;/a&gt;</code></pre>
+                        <aside class="notes">
+                            <p>
+                                An HTML-friendly development experience For the most part, Razor markup using Tag Helpers looks like standard HTML.
+                                Front-end designers conversant with HTML/CSS/JavaScript can edit Razor without learning C# Razor syntax.
+                            </p>
+                            <p>
+                                A rich IntelliSense environment for creating HTML and Razor markup This is in sharp contrast to HTML Helpers,
+                                the previous approach to server-side creation of markup in Razor views.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
