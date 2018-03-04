@@ -1,0 +1,12 @@
+﻿@helper List2(string[] items) {
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+@helper Image(string source, string alt) { 
+    <img src="@source" alt="@alt" />
+}
