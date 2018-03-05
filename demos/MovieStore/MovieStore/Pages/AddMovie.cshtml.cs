@@ -1,18 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace MovieStore.Pages
+﻿namespace MovieStore.Pages
 {
-    public class AboutModel : PageModel
-    {
-        public string Message { get; set; }
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+    using MovieStore.Models;
 
-        public void OnGet()
+    public class AddMovie : PageModel
+    {
+        [BindProperty]
+        public Movie Movie { get; set; }
+        
+        public IActionResult OnPost(Movie movie)
         {
-            Message = "Your application description page.";
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            DataContext.Movies.Add(movie);
+            return RedirectToPage("Movies");
+        }
+
+
+        public IActionResult GetGenres()
+        {
+            return new JsonResult(new string[] { "One", "Two" });
         }
     }
 }

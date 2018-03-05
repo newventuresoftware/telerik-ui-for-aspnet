@@ -1,9 +1,43 @@
 ﻿@page
-@model AboutModel
+@model AddMovie
 @{
     ViewData["Title"] = "Add Movie";
 }
 <h2>@ViewData["Title"]</h2>
-<div class="jumbotron">
 
+<div class="jumbotron">
+    <div asp-validation-summary="All"></div>
+
+    <form method="post">
+        <div class="row">
+            <label asp-for="Movie.Title"></label>
+            <input asp-for="Movie.Title" />
+        </div>
+        <div class="row">
+            <label asp-for="Movie.ReleaseDate"></label>
+            <kendo-datepicker asp-for="Movie.ReleaseDate" name="Movie.ReleaseDate" format="dd/MM/yyyy"></kendo-datepicker>
+        </div>
+        <div class="row">
+            <label asp-for="Movie.Rating"></label>
+            <kendo-numerictextbox asp-for="Movie.Rating" name="Movie.Rating" value="5" />
+        </div>
+        <div class="row">
+            <label asp-for="Movie.Genre"></label>
+            <kendo-dropdownlist asp-for="Movie.Genre" name="Movie.Genre">
+                <datasource type="DataSourceTagHelperType.Custom">
+                    <transport>
+                        <read url="/api/genres" />
+                    </transport>
+                </datasource>
+            </kendo-dropdownlist>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
 </div>
+<script>
+    $(function () {
+        $('form').kendoValidator();
+    });
+</script>

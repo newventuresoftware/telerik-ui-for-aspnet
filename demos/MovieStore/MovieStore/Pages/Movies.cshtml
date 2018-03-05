@@ -1,8 +1,15 @@
 ﻿@page
-@model ContactModel
+@model Movies
 @{
     ViewData["Title"] = "Movies";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@Model.Message</h3>
 
+<div class="jumbotron">
+    <ul>
+        @foreach(var movie in Model.MovieList)
+        {
+            <li>@movie.Title (@movie.ReleaseDate.Year), @movie.Genre, <strong>@movie.Rating</strong></li>
+        }
+    </ul>
+</div>
