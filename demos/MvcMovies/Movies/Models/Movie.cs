@@ -3,10 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Movies.Models
 {
+    // the attribute constraints defined here are reflected in the client-side validation of the kendo widgets
+    // e.g. the min/max string length, error messages, etc.
     public class Movie
     {
         public int Id { get; set; }
-
+        
         [Required(ErrorMessage = "You need to specify a title!")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "The title should be between 3 and 30 symbols long.")]
         public string Title { get; set; }
