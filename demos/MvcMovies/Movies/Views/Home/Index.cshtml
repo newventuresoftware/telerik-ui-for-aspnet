@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Telerik UI for ASP.NET MVC - Movies Grid</h2>
+
+    @Html.Kendo().Culture()
+        
+    @(Html.Kendo()
+            .Grid<Movies.Models.Movie>()
+            .Name("grid")
+            .Columns(column =>
+            {
+                column.Bound(model => model.Title);
+                column.Bound(model => model.Genre);
+                column.Bound(model => model.Rating);
+                column.Bound(model => model.ReleaseDate);
+                column.Command(command =>
+                {
+                    command.Edit();
+                    command.Destroy();
+                });
+            })
+            .ToolBar(bar => bar.Create())
+            .DataSource(dataSource =>
+            {
+                dataSource
+                    .Ajax()
+                    .PageSize(10)
+                    .Model(m => m.Id(movie => movie.Title))
+                    .Update(update => update.Action("EditMovie", "Movies"))
+                    .Destroy(destroy => destroy.Action("DeleteMovie", "Movies"))
+                    .Create(create => create.Action("CreateMovie", "Movies"))
+                    .Read(read => read.Action("GetMovies", "Movies"));
+            })
+            .Pageable(page => page.PageSizes(new int[] { 5, 10, 20 }))
+            .Filterable()
+            .Groupable()
+            .Sortable()
+            .Events(events =>
+            {
+                events.Save("onSave");
+            }))
+
+    <script>
+        function onSave(event) {
+            console.log(event);
+        }
+    </script>
+
+</div>
