@@ -8,6 +8,9 @@ namespace MusicStore
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            
+            bundles.UseCdn = true;   //enable CDN support
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -23,14 +26,15 @@ namespace MusicStore
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
-                "~/Scripts/kendo/kendo.all.min.js",
-                "~/Scripts/kendo/kendo.aspnetmvc.min.js"));
+            // Use the following code if Kendo UI is hosted locally
+            //bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
+            //    "~/Scripts/kendo/kendo.all.min.js",
+            //    "~/Scripts/kendo/kendo.aspnetmvc.min.js"));
 
-            bundles.Add(new StyleBundle("~/Content/kendo").Include(
-                      "~/Content/kendo/kendo.common.min.css",
-                      "~/Content/kendo/kendo.default.min.css"));
-
+            //bundles.Add(new StyleBundle("~/Content/kendo").Include(
+            //          "~/Content/kendo/kendo.common.min.css",
+            //          "~/Content/kendo/kendo.default.min.css"));
+            
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/kendo/kendo.common.min.css",
