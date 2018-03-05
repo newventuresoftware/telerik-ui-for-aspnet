@@ -154,6 +154,9 @@ namespace Movies.Controllers
                 movies.Add(movie);
             }
 
+            // the grid expects to receive the newly created or edited object in the DataSourceResult format
+            // putting the single object into an array of anonymous objects and using the ToDataSourceResult kendo extension to compose the result is the quickest way to achieve that
+            // we also pass in the ModelState so that if there are any errors, they will be included in the response
             var result = new[] { movie }.ToDataSourceResult(request, this.ModelState);
             return this.Json(result);
         }
