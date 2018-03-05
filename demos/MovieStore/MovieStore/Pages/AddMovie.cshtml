@@ -23,12 +23,9 @@
         </div>
         <div class="row">
             <label asp-for="Movie.Genre"></label>
-            <kendo-dropdownlist asp-for="Movie.Genre" name="Movie.Genre">
-                <datasource type="DataSourceTagHelperType.Custom">
-                    <transport>
-                        <read url="/api/genres" />
-                    </transport>
-                </datasource>
+            <kendo-dropdownlist asp-for="Movie.Genre" name="Movie.Genre" 
+                                bind-to="Model.Genres">
+            
             </kendo-dropdownlist>
         </div>
         <div class="row">

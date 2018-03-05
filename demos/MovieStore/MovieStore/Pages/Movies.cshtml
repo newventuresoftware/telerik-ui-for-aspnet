@@ -6,10 +6,28 @@
 <h2>@ViewData["Title"]</h2>
 
 <div class="jumbotron">
-    <ul>
-        @foreach(var movie in Model.MovieList)
-        {
-            <li>@movie.Title (@movie.ReleaseDate.Year), @movie.Genre, <strong>@movie.Rating</strong></li>
-        }
-    </ul>
+    @*<ul>
+            @foreach(var movie in Model.MovieList)
+            {
+                <li>@movie.Title (@movie.ReleaseDate.Year), @movie.Genre, <strong>@movie.Rating</strong></li>
+            }
+        </ul>*@
+    <kendo-grid name="grid">
+        <datasource type="DataSourceTagHelperType.Ajax" server-operation="false">
+            <transport>
+                <read url="/api/movies" type="get" />
+            </transport>
+            <schema>
+                <model id="Title"></model>
+            </schema>
+        </datasource>
+        <groupable enabled="true" />
+        <sortable enabled="true" />
+        <columns>
+            <column field="Title" title="Movie Title"></column>
+            <column field="ReleaseDate" title="Release Date" />
+            <column field="Genre" title="Genre" />
+            <column field="Rating" title="Rating" />
+        </columns>
+    </kendo-grid>
 </div>
