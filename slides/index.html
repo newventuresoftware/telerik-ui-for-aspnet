@@ -655,18 +655,33 @@ var items = new [] {
                         </ul>
                     </section>
                     <section>
-                        <h3>Customization</h3>
-                        <ul>
-                            <li class="fragment grow">Client-Side Objects</li>
-                            <li class="fragment grow">Client Templates</li>
-                            <li class="fragment grow">Form Rendering</li>
-                        </ul>
-                    </section>
-                    <section>
                         <h3>Validation</h3>
                         <p>
                             <a href="https://docs.telerik.com/aspnet-mvc/getting-started/validation" target="_blank">Using the Data-Annotation Attributes</a>
                         </p>
+                    </section>
+                    <section data-background="#353334">
+                        <h3>Working with the Kendo UI Data Source</h3>
+                        <ul>
+                            <li class="fragment grow">Binding to Remote Data</li>
+                            <li class="fragment grow"><strong><code>DataSourceRequest</code></strong></li>
+                            <li class="fragment grow"><strong><code>DataSourceResult</code></strong></li>
+                        </ul>
+                        <aside class="notes">
+                            <p>Kendo.Mvc.UI.DataSourceRequest
+                                Provides information about paging, sorting, filtering and grouping of data.
+                            </p>
+                            <p>
+                                Kendo.Mvc.UI.DataSourceResult
+                                Provides the processed data after paging, sorting, filtering and grouping are applied.
+                            </p>
+                            <p>
+                                ToDataSourceResult extension method to convert any IQueryable or IEnumerable to a DataSourceResult object.
+                                It will help you page, filter, sort or group your data using the information provided by the DataSourceRequestObject.
+
+                                Your AJAX action will take one parameter:  DataSourceRequest.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="./img/bg-pattern.png" class="color-white" id="theme-builder">
                         <a href="http://themebuilder.telerik.com/aspnet-mvc" target="_blank">
@@ -954,6 +969,15 @@ var items = new [] {
                         <a href="https://www.telerik.com/aspnet-core-ui" target="_blank">Home</a>,
                         <a href="https://docs.telerik.com/aspnet-core/introduction" target="_blank">Docs</a>
                     </section>
+                    <section>
+                        <h3>Project Setup</h3>
+                        <a href="https://docs.telerik.com/aspnet-core/getting-started/getting-started#configuration-Create" target="_blank">
+                            Manual
+                        </a>
+                        <aside class="notes">
+
+                        </aside>
+                    </section>
                     <section data-background="#430368">
                         <h3>Project Setup</h3>
                         <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
@@ -975,14 +999,6 @@ var items = new [] {
                 </section>
                 <!-- Common Features -->
                 <section>
-                    <section data-background="#353334">
-                        <h3>Working with the Kendo UI Data Source</h3>
-                        <ul>
-                            <li class="fragment grow">Custom DataSource</li>
-                            <li class="fragment grow"><strong><code>DataSourceRequest</code></strong></li>
-                            <li class="fragment grow"><strong><code>DataSourceResult</code></strong></li>
-                        </ul>
-                    </section>
                     <section>
                         <h3>Responsive Design</h3>
                         <a href="https://www.telerik.com/aspnet-mvc/responsive-features" target="_blank">
