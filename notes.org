@@ -1,63 +1,39 @@
-https://docs.telerik.com/aspnet-mvc/getting-started/kendo-ui-vs-mvc-wrappers
-https://github.com/telerik/kendo-examples-asp-net-mvc
+Core Setup
 
-* New Venture Software
-Your premier consulting and professional services partner for Progress Telerik products and technologies. Trust a reliable partner who’s been instrumental in building the award-winning DevCraft suite. 
- 
-Message pillars:
+1. ASP.NET Core Web App (Razor Pages)
+2. https://docs.telerik.com/aspnet-core/getting-started/getting-started
+Install NuGet package to PM Console and app private nuget repo with credentials
+Install-Package NuGet.CommandLine -Version 4.4.1
+-----
+NuGet Sources Add -Name "telerik.com" -Source "https://nuget.telerik.com/nuget" -UserName "webster@abv.bg" -Password "gunners123"
+-----
+search for "telerik.ui.for.aspnet.core"
+---
+// Maintain property names during serialization. See:
+            // https://github.com/aspnet/Announcements/issues/194
+            services
+                .AddMvc()
+                .AddJsonOptions(options =>
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
-1.	The exceptional quality of our consulting and professional services stems from a solid background and expertise in Telerik DevCraft:
-a.	Benefit from being consulted by ex-Progress Telerik software architects who have led a number of teams building the Telerik DevCraft suite.
-2.	Portfolio breadth: we support all progress Telerik products and technologies:
-a.	The New Venture Software team possesses rock-solid understanding, experience and expertise in all Progress Telerik products, be it for the web, desktop or mobile. 
-3.	Successful track record of delivering future-proof software consulting and development solutions.
-a.	New Venture Software has a proven record of success delivering software solutions that can transform businesses.
+            // Add Kendo UI services to the services container
+            services.AddKendo();
 
-Telerik
-Modern UI Made Easy. Tools for .NET Ninjas. 
+----
+add     app.UseKendo(env); to Configure
+----
+add to _ViewImports.cshtml
+@addTagHelper *, Kendo.Mvc
+@using Kendo.Mvc.UI
 
-Increase Productivity. Decrease Time-to-Market.
-•	With a comprehensive set of UI libraries and reporting solutions for all .NET development platforms, Telerik tools enable you to build and enhance your line of business applications quickly and easily. 
-•	By utilizing a wide set of UI components for web/mobile and desktop, as well as a variety of themes and customization features, .NET devs can deliver modern, feature-rich LoB applications following the latest trends in half the time. 
-•	Jumpstart your development with Telerik, through our intuitive Microsoft-based APIs, detailed documentation, product demos and VS templates and build your app following your project specifications in ASP.NET Ajax, ASP.NET MVC, ASP.NET Core, Xamarin, WPF, WinForms and UWP. 
-•	Use a familiar API—based on the Microsoft API—and customize your app to your exact specifications. Take advantage of thousands of demos with source code, thorough documentation and VS templates
+3. Register the Kendo UI styles and scripts in ~/Views/Shared/_Layout.cshtml. Use cdn (step 7 https://docs.telerik.com/aspnet-core/getting-started/getting-started#configuration-Add)
+    <link href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.common-material.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2018.1.221/styles/kendo.material.min.css" rel="stylesheet" type="text/css" />
 
-Stunning Design. Modern UI.
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.aspnetmvc.min.js"></script>
 
-•	Create stunning data-rich desktop, web, and mobile apps with professionally designed UI controls such as Grids, Charts, Gauges, Calendars and more.
-•	Built-in themes give your applications a professional look and feel that can be customized to meet the needs and requirements of your organizations industry and vertical.
-In the mobile-first world we live in, touch and gestures are imperative to any app. The Telerik toolset allows for touch while not sacrificing performance or design.
-•	Telerik’s striking components can be customized to quickly and efficiently fit your business needs and scenarios delivering a professional and appealing UI
-
-Industry Leading Support. Maintenance. Longevity.
-
-•	Receive expert and timely support, even during your trial, from the same developers who built the tools. 
-•	The Telerik toolset comes with three major releases per year and support for the latest .NET development patterns.
-•	Future-proof your Microsoft-stack apps with the toolset that is always in lockstep with the latest Microsoft open source and commercial frameworks. 
-•	Get support from the same developers, who build the product and join a global community of more than 2m devs working with the Telerik stack.
-
-Document Processing included in ALL suites. 
-With Telerik you get built-in Document Processing Libraries for ASP.NET WebForms, WPF, WinForms (soon Xamarin, ASP.NET Core and MVC) 
-•	Document processing libraries offered out of the box in the Telerik Bundle, provide end users to create, review, edit and manage documents in the most common file formats including word, spreadsheets and PDF, without the need of third party software such as Microsoft Office
-•	Developers can easily include this functionality within the app, without having to purchase licenses for third party tools
-•	The RadWordsProcessing, RadSpreadProcessing and RadPDFProcessing Libraries allow users to import and export files from and to the desktop application, as well as convert documents from one file format to another
-
-KENDO UI
-Build Better Web Apps Faster    this is the key positioning we have right now
-
-These are the pillars to support the message: 
-
-1.	Decease Time To Market 
-a.	Easily and quickly integrate advanced UI components into your design and reduce time-to-market 
-b.	Easily integrate UI components into your existing designs or take advantage of advanced features in green-field development. Kendo UI lets you save time by integrating components to handle all the key functionality you need in your UI, letting you focus your development efforts on your proprietary features. 
-c.	Kendo UI’s customizable ThemeBuilder, complete with a library of popular standard themes, allows you to quickly drop in new components and minimize integration effort.
-2.	Supports popular frameworks 
-a.	Integrates seamlessly with your existing frameworks including jQuery, Angular, React, and Vue 
-b.	Built from the ground up to support each framework, Kendo UI offers the best UI performance when developing with popular current technology including jQuery, Angular, React, and Vue. We fit right into your environment so you don’t have to waste time on integration.
-3.	Provides advanced UI features  
-a.	Provide a better user experience with advanced UI components improving both usability and functionality 
-b.	Developers need to produce apps that look professional as well as act professional. The UI provides more than just a large part of an app’s functionality; it provides the “face” of the app. 
-c.	Full support for accessibility standards means automatic compliance with government requirements
-4.	Reduces design risk 
-a.	Reduce risk with proven quality you can rely on from the respected name in UI components 
-b.	Developers need to know that they can rely on any 3rd party libraries and won’t have to waste their time debugging someone else’s code. If you do have questions, our 24/7/365 support team will quickly respond and get you going.
+5. Either move scripts to head or defer initializing the widgets
