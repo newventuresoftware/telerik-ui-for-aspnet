@@ -7,6 +7,6 @@
     </ul>
 }
 
-@helper Image(string source, string alt) { 
-    <img src="@source" alt="@alt" />
+@helper MyImage(string source, string alt, int width = 300) { 
+    <img src="@source" alt="@alt" width="@width" />
 }

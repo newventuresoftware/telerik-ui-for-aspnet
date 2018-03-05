@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace MVCSandbox
+namespace MusicStore
 {
     public class BundleConfig
     {

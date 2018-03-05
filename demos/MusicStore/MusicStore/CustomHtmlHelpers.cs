@@ -1,4 +1,4 @@
-﻿namespace MVCSandbox
+﻿namespace MusicStore
 {
     using System.Collections.Generic;
     using System.Web;
@@ -7,7 +7,7 @@
 
     public static class CustomHtmlHelpers
     {
-        public static IHtmlString List(this HtmlHelper helper, IEnumerable<string> items, bool ordered = false)
+        public static IHtmlString MyList(this HtmlHelper helper, IEnumerable<string> items, bool ordered = false)
         {
             var list = new TagBuilder(ordered ? "ol" : "ul");
             
@@ -21,7 +21,7 @@
             return new MvcHtmlString(list.ToString());
         }
 
-        public static IHtmlString Button(this HtmlHelper helper, string text, object attributes = null)
+        public static IHtmlString MyButton(this HtmlHelper helper, string text, object attributes = null)
         {
             var button = new TagBuilder("button");
             button.SetInnerText(text);

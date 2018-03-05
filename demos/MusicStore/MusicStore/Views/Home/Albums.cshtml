@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Albums";
+}
+
+@model IEnumerable<MusicStore.Models.Album>
+
+<div class="jumbotron">
+    <ul>
+        @foreach(var album in Model)
+        {
+            <li style="color: @album.CoverColor">@album.Title, @album.ReleaseDate.Year, @album.Genre</li>
+        }
+    </ul>
+</div>

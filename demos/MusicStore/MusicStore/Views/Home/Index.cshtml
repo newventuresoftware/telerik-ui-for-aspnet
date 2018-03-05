@@ -1,0 +1,17 @@
+﻿@{ 
+    ViewBag.Title = "Home";
+
+    var topArtists = new string[]
+    {
+        "Eminem", "Metallica", "Rihanna", "Rolling Stones"
+    };
+}
+<h1>
+    Music Store
+</h1>
+
+<div class="jumbotron">
+    @Helpers.MyImage("https://media.wired.com/photos/5a0b6dbc4d244a18f0437811/master/pass/iStock-636156852.jpg", "Music", 300)
+    <h2>Top Artists</h2>
+    @Html.MyList(topArtists, ordered: true)
+</div>
