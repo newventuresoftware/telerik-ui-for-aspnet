@@ -64,8 +64,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Movies">Movies</a></li>
+                    <li><a asp-page="/AddMovie">Add Movie</a></li>
                 </ul>
             </div>
         </div>
@@ -74,7 +74,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - MovieStore</p>
+            <p>&copy; @DateTime.Now.Year - MovieStore</p>
         </footer>
     </div>
     @RenderSection("Scripts", required: false)
