@@ -23,6 +23,11 @@
         [HttpPost]
         public ActionResult AddAlbum(Album album)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
             DataContext.Albums.Add(album);
             return RedirectToAction("Albums", "Home");
         }

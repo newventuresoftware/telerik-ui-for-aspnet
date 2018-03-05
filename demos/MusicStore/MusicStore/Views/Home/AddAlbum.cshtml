@@ -5,6 +5,7 @@
 @model MusicStore.Models.Album
 
 <div class="jumbotron">
+    <h2>Add Album</h2>
     @using (Html.BeginForm("AddAlbum", "Home", FormMethod.Post))
     {
         @Html.ValidationSummary()
@@ -12,27 +13,38 @@
         <div class="row">
             @Html.LabelFor(model => model.Title) <br />
             @Html.TextBoxFor(model => model.Title)
+
         </div>
         <div class="row">
             @Html.LabelFor(model => model.ReleaseDate) <br />
-            @(Html.Kendo().DatePickerFor(model => model.ReleaseDate))
+            @(Html.Kendo().DatePickerFor(model => model.ReleaseDate).Format("dd/MM/yyyy"))
         </div>
         <div class="row">
             @(Html.Kendo().AutoCompleteFor(model => model.Genre)
-                          .Name("genre")
-                          .Filter("startswith")
-                          .Placeholder("Genre")
-                          .BindTo(new string[] { "Pop", "Rock", "Classic", "Hip-Hop", "Metal", "Rave", "Dubtep" }))
+                                  .Name("genre")
+                                  .Filter("startswith")
+                                  .Placeholder("Genre")
+                                  .BindTo(new string[] { "Pop", "Rock", "Classic", "Hip-Hop", "Metal", "Rave", "Dubtep" }))
         </div>
         <div class="row">
+            @Html.LabelFor(model => model.CoverColor) <br />
             @(Html.Kendo().ColorPickerFor(model => model.CoverColor)
-                        .Value("#fff"))
+                                .Value("#fff"))
         </div>
         <div class="row">
-            @(Html.Kendo().Button()
-                                    .Name("SubmitBtn")
-                                    .HtmlAttributes(new { type = "submit" })
-                                    .Content("Submit"))
+            @(Html.Kendo()
+                .Button()
+                .Name("SubmitBtn")
+                .HtmlAttributes(new { type = "submit" })
+                .Content("Submit"))
         </div>
     }
 </div>
+<script>
+    $(function () {
+        // Kendo Validator Reference: https://docs.telerik.com/kendo-ui/controls/editors/validator/overview
+        // Telerik UI for ASP.NET MVC Validation https://docs.telerik.com/aspnet-mvc/getting-started/validation
+        // comment in order to fall back to the default MVC validation
+        $('form').kendoValidator()
+    });
+</script>
