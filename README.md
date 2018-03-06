@@ -16,14 +16,14 @@ Open slides/index.html in your browser or run the presentation on [RawGit](https
 
 ### Prerequisites
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads/) with installed packages for ASP.NET MVC 5 & ASP.NET Core 2.
+* [Visual Studio 2017](https://www.visualstudio.com/downloads/) with installed ASP.NET and web development packages.
 
 ### MusicStore (ASP.NET MVC Demo)
 
-* All the needed files are already linked and referenced in the project, so a simple rebuild should be enough to get the demo up and running. 
+* All the needed files are already included and referenced, so simply build the project (CTRL + SHIFT + B) to get it ready to run. 
 * Use this [step-by-step tutorial](https://www.newventuresoftware.com/blog/getting-started-with-telerik-ui-for-asp.net-mvc) on how to build a Telerik UI ASP.NET MVC project from scratch or how to integrate the Telerik UI MVC suite in an already existing project.
 
-### MovieStore (ASP.NET Core Demo)
+### MovieStore (ASP.NET Core Razor Pages Demo)
 
-* A simple rebuild is sufficient here as well.
+* A simple build is sufficient here as well.
 * On how to create a new project yourself or integrate the Telerik UI ASP.NET Core suite into an existing project refer to [this article](https://docs.telerik.com/aspnet-core/getting-started/getting-started).
