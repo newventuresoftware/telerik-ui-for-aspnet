@@ -616,7 +616,7 @@ var items = new [] {
                     </section>
                     <section>
                         <h3>Project Setup</h3>
-                        <a href="https://docs.telerik.com/aspnet-mvc/introduction" target="_blank">
+                        <a href="https://www.newventuresoftware.com/blog/getting-started-with-telerik-ui-for-asp.net-mvc" target="_blank">
                             Manual
                         </a>
                         <aside class="notes">
@@ -651,7 +651,6 @@ var items = new [] {
                             <li class="fragment grow">Widget Options</li>
                             <li class="fragment grow">Setting the Name</li>
                             <li class="fragment grow">Deferring Initialization</li>
-                            <li class="fragment grow">Event Handling</li>
                         </ul>
                     </section>
                     <section>
@@ -742,7 +741,7 @@ var items = new [] {
                     </section>
                     <section>
                         <h4>ASP.NET Core</h4>
-                        <ul>
+                        <ul style="font-size: 0.8em">
                             <li class="fragment">
                                 A unified story for building web UI and web APIs.
                             </li>
@@ -836,8 +835,26 @@ var items = new [] {
                             <li class="fragment"><strong>*Not*</strong> only for "simple" scenarios</li>
                         </ul>
                         <aside class="notes">
-                            Razor Pages is a new feature of ASP.NET Core MVC that makes coding page-focused scenarios easier and more productive. We can use
-                            either Razor Pages or the classical Model-View-Controller approach for creating web apps, but Razor pages is the recommended approach.
+                            <p>
+                                Razor Pages ship as part of ASP.NET Core MVC, and take advantage of many built-in ASP.NET Core MVC features like routing,
+                                model binding and filters. They share some naming similarity with the Web Pages feature that Microsoft shipped with Web
+                                Matrix in 2010. However, while Web Pages primarily targeted novice Web developers (and were of little interest to most
+                                experienced developers), Razor Pages combine strong architectural design with approachability.                                
+                            </p>
+                            <p>
+                                Architecturally, Razor Pages don’t follow the Model-View-Controller (MVC) pattern, because they lack Controllers. Rather, Razor Pages
+                                follow more of a Model-View-ViewModel (MVVM) pattern that should be familiar to many native app developers. You can also consider Razor
+                                Pages to be an example of the Page Controller pattern, which Martin Fowler describes as “An object that handles a request for a specific
+                                page or action on a Web site. That [object] may be the page itself, or it may be a separate object that corresponds to that page.” Of course,
+                                the Page Controller pattern should also be familiar to anyone who has worked with ASP.NET Web Forms, because this was how the original ASP.NET pages worked, as well.                                
+                            </p>
+                            <p>
+                                Unlike ASP.NET Web Forms, Razor Pages are built on ASP.NET Core and support loose coupling, separation of concerns and SOLID principles.
+                                Razor Pages are easily unit tested (if separate PageModel classes are used) and can provide a foundation for clean, maintainable enterprise
+                                applications. Don’t write off Razor Pages as just a “training wheels” feature meant for hobbyist programmers. Give Razor Pages a serious
+                                look and consider whether Razor Pages (alone or in combination with traditional Controller and View pages) can improve the design of your ASP.NET Core
+                                application by reducing the number of folders you need to jump between when working on a particular feature.
+                            </p>
                         </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
@@ -863,9 +880,14 @@ var items = new [] {
                             </ul>
                         </div>
                     </section>
+                    <section data-background="#fff">
+                        <img alt="" src="./img/razor-pages-vs-mvc.png" class="no-border" />
+                    </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
-                        <p>Getting Started with Razor Pages</p>
+                        <p>
+                            <a href="https://msdn.microsoft.com/en-us/magazine/mt842512.aspx" target="_blank" style="color: lightblue">Get Started with Razor Pages</a>
+                        </p>
                         <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
                     </section>
                     <section>
