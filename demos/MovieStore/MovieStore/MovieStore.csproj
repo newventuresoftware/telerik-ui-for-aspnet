@@ -5,9 +5,13 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="NuGet.CommandLine" Version="4.4.1" />
-    <PackageReference Include="Telerik.UI.for.AspNet.Core.Trial" Version="2018.1.221" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\lib\Kendo.Mvc.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
