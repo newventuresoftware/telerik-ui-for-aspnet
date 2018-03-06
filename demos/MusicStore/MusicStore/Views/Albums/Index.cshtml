@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Albums";
+}
+
+@using MusicStore.Models
+
+@model IEnumerable<Album>
+
+@*<div class="jumbotron">
+
+    <ul>
+            @foreach(var album in Model)
+            {
+                <li style="color: @album.CoverColor">@album.Title, @album.ReleaseDate.Year, @album.Genre</li>
+            }
+        </ul>
+</div>*@
+
+@*Server Binding*@
+
+@*@(Html.Kendo()
+    .Grid<MusicStore.Models.Album>(Model)
+    .Name("albums")
+    .Sortable()
+    .Filterable()
+    .Groupable())*@
+
+@*Ajax*@
+
+@(Html.Kendo()
+            .Grid<Album>()
+            .Name("albums")
+            .DataSource(ds =>
+            {
+                ds.Ajax()
+                .ServerOperation(true)
+                .Model(m => m.Id(album => album.Title))
+                .Read(read => read.Action("GetAlbums", "Albums"))
+                .Update(update => update.Action("EditAlbum", "Albums"))
+                .Destroy(destroy => destroy.Action("DeleteAlbum", "Albums"));
+            })
+            .Columns(col =>
+            {
+                col.Bound(model => model.Title);
+                col.Bound(model => model.Genre);
+                col.Bound(model => model.ReleaseDate);
+                col.Bound(model => model.CoverColor).ClientTemplate("<div style=\"background-color: #: CoverColor # \">&nbsp;</div>").Width(50);
+
+                col.Command(command =>
+                {
+                    command.Edit();
+                    command.Destroy();
+            });
+            })
+            .Editable(editable => editable.Mode(GridEditMode.PopUp))
+            .Sortable()
+            .Filterable()
+            .Groupable()
+            .Editable()
+            .Deferred())
+
+@section scripts {
+    <script>
+        $(function () {
+            var gridInstance = $('#albums').data('kendoGrid');
+            console.log(gridInstance);
+        });
+    </script>
+}

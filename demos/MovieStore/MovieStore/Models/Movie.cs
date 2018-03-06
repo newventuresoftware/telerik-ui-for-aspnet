@@ -14,7 +14,8 @@
 
         public string Genre { get; set; }
 
-        [Range(0, 10, ErrorMessage = "Movies are rated from 0 to 10")]
+        [DisplayFormat(DataFormatString = "{0:N1}", ApplyFormatInEditMode = true)]
+        [Range(1, 10, ErrorMessage = "The rating should be a number between 1 and 10.")]
         public int Rating { get; set; }
     }
 }

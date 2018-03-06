@@ -6,7 +6,8 @@
 
 <div class="jumbotron">
     <h2>Add Album</h2>
-    @using (Html.BeginForm("AddAlbum", "Home", FormMethod.Post))
+    
+    @using (Html.BeginForm("Create", "Albums", FormMethod.Post))
     {
         @Html.ValidationSummary()
 
@@ -17,26 +18,26 @@
         </div>
         <div class="row">
             @Html.LabelFor(model => model.ReleaseDate) <br />
-            @(Html.Kendo().DatePickerFor(model => model.ReleaseDate).Format("dd/MM/yyyy"))
+            @(Html.Kendo().DatePickerFor(model => model.ReleaseDate).Format("MM/dd/yyyy"))
         </div>
         <div class="row">
             @(Html.Kendo().AutoCompleteFor(model => model.Genre)
-                                  .Name("genre")
-                                  .Filter("startswith")
-                                  .Placeholder("Genre")
-                                  .BindTo(new string[] { "Pop", "Rock", "Classic", "Hip-Hop", "Metal", "Rave", "Dubtep" }))
+                                                  .Name("genre")
+                                                  .Filter("startswith")
+                                                  .Placeholder("Genre")
+                                                  .BindTo(new string[] { "Pop", "Rock", "Classic", "Hip-Hop", "Metal", "Rave", "Dubtep" }))
         </div>
         <div class="row">
             @Html.LabelFor(model => model.CoverColor) <br />
             @(Html.Kendo().ColorPickerFor(model => model.CoverColor)
-                                .Value("#fff"))
+                                                .Value("#fff"))
         </div>
         <div class="row">
             @(Html.Kendo()
-                .Button()
-                .Name("SubmitBtn")
-                .HtmlAttributes(new { type = "submit" })
-                .Content("Submit"))
+                                .Button()
+                                .Name("SubmitBtn")
+                                .HtmlAttributes(new { type = "submit" })
+                                .Content("Submit"))
         </div>
     }
 </div>

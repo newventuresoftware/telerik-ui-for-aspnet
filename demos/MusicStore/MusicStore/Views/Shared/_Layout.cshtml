@@ -24,6 +24,7 @@
     <script src="https://kendo.cdn.telerik.com/2018.1.221/js/jszip.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2018.1.221/js/kendo.aspnetmvc.min.js"></script>
+    @Html.Kendo().Culture()
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -39,8 +40,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Albums", "Albums", "Home")</li>
-                    <li>@Html.ActionLink("Add Album", "AddAlbum", "Home")</li>
+                    <li>@Html.ActionLink("Albums", "Index", "Albums")</li>
+                    <li>@Html.ActionLink("Add Album", "Create", "Albums")</li>
                 </ul>
             </div>
         </div>
@@ -53,7 +54,7 @@
         </footer>
     </div>
 
-
+    @Html.Kendo().DeferredScripts()
     @RenderSection("scripts", required: false)
 </body>
 </html>

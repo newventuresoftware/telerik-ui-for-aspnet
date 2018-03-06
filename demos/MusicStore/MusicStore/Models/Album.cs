@@ -6,10 +6,15 @@
     public class Album
     {
         [Required]
-        [StringLength(20, ErrorMessage = "The length should not exceed 20 characters.")]
+        public int Id { get; set; }
+         
+        [Required]
+        [StringLength(30, ErrorMessage = "The length should not exceed 30 characters.")]
+        //[RegularExpression("[A-Za-z]+", ErrorMessage = "Title Contains Invalid Characters!")]
         public string Title { get; set; }
 
         [Required]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
         
         public string Genre { get; set; }
