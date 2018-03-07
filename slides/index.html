@@ -185,6 +185,11 @@
                             </ol>
                         </aside>
                     </section>
+                    <section data-background="./img/progress-next.PNG" class="present" data-background-image="./img/progress-next.PNG" style="top: 135px; display: block;">
+                        <a href="https://www.progress.com/next" target="_blank">
+                            <img alt="" src="./img/transparent.png" class="no-border bg-transparent">
+                        </a>
+                    </section>
                 </section>
                 <section id="agenda" class="color-white" data-background-image="./img/school-board.jpg">
                     <h3>Agenda</h3>
@@ -614,6 +619,13 @@ var items = new [] {
                         <h3>Getting Started<br/>Telerik UI for ASP.NET MVC</h3>
                         <a href="https://www.telerik.com/aspnet-mvc" target="_blank">Home</a>, <a href="https://docs.telerik.com/aspnet-mvc/introduction" target="_blank">Docs</a>
                     </section>
+                    <section data-background="#430368">
+                        <h3>Project Setup</h3>
+                        <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
+                        <a href="https://docs.telerik.com/aspnet-mvc/vs-integration/new-project-wizard" target="_blank">
+                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
+                        </a>
+                    </section>
                     <section>
                         <h3>Project Setup</h3>
                         <a href="https://www.newventuresoftware.com/blog/getting-started-with-telerik-ui-for-asp.net-mvc" target="_blank">
@@ -628,13 +640,6 @@ var items = new [] {
                                 </li>
                             </ol>
                         </aside>
-                    </section>
-                    <section data-background="#430368">
-                        <h3>Project Setup</h3>
-                        <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
-                        <a href="https://docs.telerik.com/aspnet-mvc/vs-integration/new-project-wizard" target="_blank">
-                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
-                        </a>
                     </section>
                     <section>
                         <h3>
@@ -665,6 +670,7 @@ var items = new [] {
                             <li class="fragment grow">Binding to Remote Data</li>
                             <li class="fragment grow"><strong><code>DataSourceRequest</code></strong></li>
                             <li class="fragment grow"><strong><code>DataSourceResult</code></strong></li>
+                            <li class="fragment grow"><strong><code>IEnumerable.ToDataSourceResult()</code></strong></li>
                         </ul>
                         <aside class="notes">
                             <p>Kendo.Mvc.UI.DataSourceRequest
@@ -841,20 +847,6 @@ var items = new [] {
                                 Matrix in 2010. However, while Web Pages primarily targeted novice Web developers (and were of little interest to most
                                 experienced developers), Razor Pages combine strong architectural design with approachability.                                
                             </p>
-                            <p>
-                                Architecturally, Razor Pages don’t follow the Model-View-Controller (MVC) pattern, because they lack Controllers. Rather, Razor Pages
-                                follow more of a Model-View-ViewModel (MVVM) pattern that should be familiar to many native app developers. You can also consider Razor
-                                Pages to be an example of the Page Controller pattern, which Martin Fowler describes as “An object that handles a request for a specific
-                                page or action on a Web site. That [object] may be the page itself, or it may be a separate object that corresponds to that page.” Of course,
-                                the Page Controller pattern should also be familiar to anyone who has worked with ASP.NET Web Forms, because this was how the original ASP.NET pages worked, as well.                                
-                            </p>
-                            <p>
-                                Unlike ASP.NET Web Forms, Razor Pages are built on ASP.NET Core and support loose coupling, separation of concerns and SOLID principles.
-                                Razor Pages are easily unit tested (if separate PageModel classes are used) and can provide a foundation for clean, maintainable enterprise
-                                applications. Don’t write off Razor Pages as just a “training wheels” feature meant for hobbyist programmers. Give Razor Pages a serious
-                                look and consider whether Razor Pages (alone or in combination with traditional Controller and View pages) can improve the design of your ASP.NET Core
-                                application by reducing the number of folders you need to jump between when working on a particular feature.
-                            </p>
                         </aside>
                     </section>
                     <section data-background="./img/telerik-bg.jpg">
@@ -879,9 +871,27 @@ var items = new [] {
                                 <li>View Components</li>
                             </ul>
                         </div>
+                        <aside class="notes">
+                            <p>
+                                Unlike ASP.NET Web Forms, Razor Pages are built on ASP.NET Core and support loose coupling, separation of concerns and SOLID principles.
+                                Razor Pages are easily unit tested (if separate PageModel classes are used) and can provide a foundation for clean, maintainable enterprise
+                                applications. Don’t write off Razor Pages as just a “training wheels” feature meant for hobbyist programmers. Give Razor Pages a serious
+                                look and consider whether Razor Pages (alone or in combination with traditional Controller and View pages) can improve the design of your ASP.NET Core
+                                application by reducing the number of folders you need to jump between when working on a particular feature.
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#fff">
                         <img alt="" src="./img/razor-pages-vs-mvc.png" class="no-border" />
+                        <aside class="notes">
+                            <p>
+                                Architecturally, Razor Pages don’t follow the Model-View-Controller (MVC) pattern, because they lack Controllers. Rather, Razor Pages
+                                follow more of a Model-View-ViewModel (MVVM) pattern that should be familiar to many native app developers. You can also consider Razor
+                                Pages to be an example of the Page Controller pattern, which Martin Fowler describes as “An object that handles a request for a specific
+                                page or action on a Web site. That [object] may be the page itself, or it may be a separate object that corresponds to that page.” Of course,
+                                the Page Controller pattern should also be familiar to anyone who has worked with ASP.NET Web Forms, because this was how the original ASP.NET pages worked, as well.                                
+                            </p>
+                        </aside>
                     </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
@@ -946,11 +956,11 @@ var items = new [] {
                             </p>
                         </aside>
                     </section>
-                    <section data-background="#000">
-                        <h3>Live Demo</h3>
-                        <p>Using Tag Helpers</p>
-                        <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
-                    </section>
+                    <!-- <section data-background="#000">
+                         <h3>Live Demo</h3>
+                         <p>Using Tag Helpers</p>
+                         <img alt="" src="./img/cat-kitty-computer-screen-animal-1920x1080 (1).jpg" width="550" />
+                         </section> -->
                     <section>
                         <h4 class="text-right">Creating Tag Helpers</h4>
                         <ul style="font-size: 0.7em">
@@ -991,6 +1001,13 @@ var items = new [] {
                         <a href="https://www.telerik.com/aspnet-core-ui" target="_blank">Home</a>,
                         <a href="https://docs.telerik.com/aspnet-core/introduction" target="_blank">Docs</a>
                     </section>
+                    <section data-background="#430368">
+                        <h3>Project Setup</h3>
+                        <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
+                        <a href="https://docs.telerik.com/aspnet-core/getting-started/getting-started" target="_blank">
+                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
+                        </a>
+                    </section>
                     <section>
                         <h3>Project Setup</h3>
                         <a href="https://docs.telerik.com/aspnet-core/getting-started/getting-started#configuration-Create" target="_blank">
@@ -1000,12 +1017,13 @@ var items = new [] {
 
                         </aside>
                     </section>
-                    <section data-background="#430368">
-                        <h3>Project Setup</h3>
-                        <p>Using the <strong>Visual Studio</strong> Project Wizard</p>
-                        <a href="https://docs.telerik.com/aspnet-core/getting-started/getting-started" target="_blank">
-                            <img alt="" src="./img/Cartman.png" class="no-border bg-transparent" width="250" />
-                        </a>
+                    <section data-background="#000">
+                        <p>Set up the Telerik NuGet Private Feed</p>
+                        <p>Using Visual Stuio Package Manager Console</p>
+                        <pre><code class="bash">PM> Install-Package NuGet.CommandLine</code></pre>
+                        <pre><code class="bash">PM> NuGet Sources Add -Name "telerik.com"
+      -Source "https://nuget.telerik.com/nuget"
+      -UserName "your login email" -Password "your password"</code></pre>
                     </section>
                     <section data-background="#000">
                         <h3>Live Demo</h3>
