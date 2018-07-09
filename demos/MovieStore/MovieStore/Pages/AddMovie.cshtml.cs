@@ -26,6 +26,8 @@
                 return Page();
             }
 
+            movie.Id = DataContext.Movies.Count + 1;
+
             DataContext.Movies.Add(movie);
             return RedirectToPage("Movies");
         }
