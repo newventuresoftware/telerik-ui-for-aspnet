@@ -3,27 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Music Store</title>
-
-    @*Uncomment if Kendo UI is hosted locally*@
-    @*@Styles.Render("~/Content/kendo")*@
-
+    <title>@ViewBag.Title - Kendo UI ASP.NET Application</title>
     <link href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.common-material.min.css" rel="stylesheet" type="text/css" />
-	<link href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
-	<link href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.material.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.mobile.all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://kendo.cdn.telerik.com/2018.2.620/styles/kendo.material.min.css" rel="stylesheet" type="text/css" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
-
-    @*Uncomment if Kendo UI is hosted locally*@
-    @*@Scripts.Render("~/bundles/kendo")*@
-
     <script src="https://kendo.cdn.telerik.com/2018.2.620/js/jszip.min.js"></script>
-	<script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"></script>
-	<script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.aspnetmvc.min.js"></script>
-    @Html.Kendo().Culture()
+    <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.aspnetmvc.min.js"></script>
+    
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -39,8 +32,6 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Albums", "Index", "Albums")</li>
-                    <li>@Html.ActionLink("Add Album", "Create", "Albums")</li>
                 </ul>
             </div>
         </div>
@@ -52,8 +43,7 @@
             <p>&copy; @DateTime.Now.Year - Music Store</p>
         </footer>
     </div>
-
-    @Html.Kendo().DeferredScripts()
+    
     @RenderSection("scripts", required: false)
 </body>
 </html>
