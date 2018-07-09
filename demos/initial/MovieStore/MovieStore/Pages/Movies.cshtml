@@ -1,0 +1,15 @@
+﻿@page
+@model Movies
+@{
+    ViewData["Title"] = "Movies";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="jumbotron">
+    <ul>
+        @foreach (var movie in Model.MovieList)
+        {
+            <li>@movie.Title (@movie.ReleaseDate.Year), @movie.Genre, <strong>@movie.Rating</strong></li>
+        }
+    </ul>
+</div>

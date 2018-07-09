@@ -1,0 +1,23 @@
+﻿@page
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    var topMovies = new string[]
+    {
+        "Dr. Strangelove",
+        "The Departed",
+        "Leon The Professional",
+        "Dark Swan"
+    };
+}
+
+<div class="jumbotron">
+    <div>
+        <img src="https://www.welovesolo.com/wp-content/uploads/vector/07/Film-and-movie-4.jpg"
+             alt="Movie Time"
+             width="350"
+             asp-append-version="true" />
+    </div>
+    <h3>Top Movies</h3>
+</div>
