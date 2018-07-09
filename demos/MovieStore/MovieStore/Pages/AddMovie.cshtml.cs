@@ -14,7 +14,7 @@
          * to work with the property you’ve specified, and allows handlers to work with bound properties 
          * without having to specify them as method parameters. The [BindProperty] attribute also works on Controllers.*/
         [BindProperty]
-        public Movie Movie { get; set; }
+        public Movie Movie { get; set; } = new Movie();
 
         public IEnumerable<string> Genres { get; set; } =
             new string[] { "Action", "Drama", "Comedy", "Horror", "Documentary", "Thriller", "Romance" };

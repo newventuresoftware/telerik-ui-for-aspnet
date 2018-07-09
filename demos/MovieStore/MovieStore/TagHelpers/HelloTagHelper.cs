@@ -12,7 +12,7 @@
             output.Attributes.Add("id", context.UniqueId);
 
             output.PreContent.SetContent("Hello ");
-            output.PostContent.SetContent($", time is now: {DateTime.Now.ToString("HH: mm")}");
+            output.PostContent.SetContent($", the time now is: {DateTime.Now.ToString("HH: mm")}");
         }
     }
 }

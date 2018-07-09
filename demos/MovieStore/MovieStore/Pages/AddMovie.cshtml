@@ -14,16 +14,16 @@
             <input asp-for="Movie.Title" />
         </div>
         <div class="row">
-            <label asp-for="Movie.ReleaseDate"></label>
-            <kendo-datepicker asp-for="Movie.ReleaseDate" name="Movie.ReleaseDate" format="dd/MM/yyyy"></kendo-datepicker>
+            <label for="ReleaseDate"></label>
+            <kendo-datepicker name="Movie.ReleaseDate" value="Model.Movie.ReleaseDate" format="dd/MM/yyyy" />
         </div>
         <div class="row">
-            <label asp-for="Movie.Rating"></label>
-            <kendo-numerictextbox asp-for="Movie.Rating" name="Movie.Rating" value="5" />
+            <label for="Rating"></label>
+            <kendo-numerictextbox name="Movie.Rating" value="Model.Movie.Rating" />
         </div>
         <div class="row">
-            <label asp-for="Movie.Genre"></label>
-            <kendo-dropdownlist asp-for="Movie.Genre" name="Movie.Genre" bind-to="Model.Genres"></kendo-dropdownlist>
+            <label for="Genre"></label>
+            <kendo-dropdownlist name="Movie.Genre" value="Model.Movie.Genre" bind-to="Model.Genres"></kendo-dropdownlist>
         </div>
         <div class="row">
             <input type="submit" value="Submit" />
