@@ -19,6 +19,7 @@ namespace MusicStore
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             var cultureInfo = new CultureInfo("en-US");
+            cultureInfo.DateTimeFormat.ShortDatePattern = "M/d/yyyy";
 
             CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
             CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
