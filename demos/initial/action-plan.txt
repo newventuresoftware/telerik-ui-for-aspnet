@@ -1,0 +1,43 @@
+Custom Helpers
+--------------
+Create MVC project
+Delete redundand views/controllers
+Create App_Code/Helpers.cshtml
+Create a static class - CustomHtmlHelpers.cs -> helper with an extension method
+
+Kendo UI - show jQuery demos
+
+Progress Control Panel & Setup
+------------------------------
+How to install
+What's inside the box
+Use VS template to initialize a project - browse the code
+
+MusicStore MVC
+--------------
+Manual project setup - show blog post, follow the steps
+Create Album model
+Create AlbumController with read/write actions
+Create Albums/Index.cshtml
+Create Albums/Create.cshtml - implement the form
+Validation attributes, summary, convert to client-side
+Kendo Grid for Album list - server binding
+Albums grid - DataSourceRequest/Result - ajax binding
+Make albums grid editable
+Deferred rendering
+Retreive widget instance
+
+MovieStore Core
+---------------
+TagHelpers - create, register(_ViewImports.cshtml)
+Create Core project using VS template
+Manual project setup
+Create Models, Context
+Create Razor Page - Movies - list the movies in ul
+AddMovie Razor Page - create the form
+AddMovie Client side validation
+Movies - kendo grid
+    - create MoviesController - Index
+	- grid ajax get 
+	
+
